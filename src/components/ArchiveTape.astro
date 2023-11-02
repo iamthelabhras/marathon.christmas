@@ -1,0 +1,103 @@
+---
+//    CSS & STYLE IMPORTS
+
+//    ASTRO COMPONENT IMPORTS
+
+//    ASTRO PAGE-SPECIFIC IMPORTS
+
+//    FRAMEWORK-SPECIFIC IMPORTS
+
+//    COMPONENT SCRIPTS:
+
+/// You can write any JavaScript/TypeScript that you'd like here.
+/// It will run during the build, but never in the browser.
+/// All variables are available to use in the HTML template below.
+
+//    PAGE-SPECIFIC VARIABLES
+
+const { artistTape, songTape, length = "1:25" } = Astro.props;
+
+/// FULL ASTRO COMPONENT SYNTAX:
+/// https://docs.astro.build/core-concepts/astro-components/
+---
+
+<div class="flex_container-row wprbxmas_story--cassette_tape">
+  <div class="scale_tape">
+    <div class="side left"></div>
+    <div class="cassette">
+      <div class="tape beginning">
+        <div class="center">
+          <div class="hole">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+      <div class="tape end">
+        <div class="center">
+          <div class="hole">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+      <div class="face">
+        <span class="screw"
+          ><span class="screw-center"></span><span class="screw-center"></span>
+        </span>
+        <span class="screw"
+          ><span class="screw-center"></span><span class="screw-center"></span>
+        </span>
+        <span class="screw"
+          ><span class="screw-center"></span><span class="screw-center"></span>
+        </span>
+        <span class="screw"
+          ><span class="screw-center"></span><span class="screw-center"></span>
+        </span>
+        <span class="screw"
+          ><span class="screw-center"></span><span class="screw-center"></span>
+        </span>
+        <div class="sticker">
+          <div class="title-label"></div>
+          <div class="title-label"></div>
+          <div class="title-label"></div>
+          <span id="text2">"{songTape}"</span>
+          <div class="bottom-label">
+            <span id="text3">{artistTape}</span>
+            <span id="text4">{length}</span>
+            <span id="text5"></span>
+          </div>
+          <div class="window">
+            <div class="tape beginning"></div>
+          </div>
+          <span id="text1" class="text">A</span>
+        </div>
+      </div>
+      <div class="socket">
+        <div class="hole"></div>
+        <div class="hole"></div>
+        <div class="hole"></div>
+        <div class="hole"></div>
+      </div>
+    </div>
+    <div class="side right"></div>
+  </div>
+</div>
+<div class="wprbxmas_story--cassette_tape_mobile">
+  <img
+    src="../../images/cassette_tape-white.png"
+    class="cassette_tape_mobile"
+    alt="A
+  cassette
+  tape."
+    loading="lazy"
+  />
+</div>

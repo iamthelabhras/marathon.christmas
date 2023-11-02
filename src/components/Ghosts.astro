@@ -1,0 +1,124 @@
+---
+//    CSS & STYLE IMPORTS
+
+//    ASTRO COMPONENT IMPORTS
+
+//    ASTRO PAGE-SPECIFIC IMPORTS
+
+import SectionCard from "../layouts/SectionCard.astro";
+
+//    FRAMEWORK-SPECIFIC IMPORTS
+
+//    COMPONENT SCRIPTS:
+
+/// You can write any JavaScript/TypeScript that you'd like here.
+/// It will run during the build, but never in the browser.
+/// All variables are available to use in the HTML template below.
+
+//    PAGE-SPECIFIC VARIABLES
+
+/// FULL ASTRO COMPONENT SYNTAX:
+/// https://docs.astro.build/core-concepts/astro-components/
+---
+
+<SectionCard
+  cardID="ghosts"
+  cardTitle="Ghosts of Marathons Past"
+  cardSize="full"
+>
+  <div class="card_text">
+    <p>
+      Each year, Jon broadcasts hundreds of off-the-beaten-track holiday gems,
+      including (since 2011) original contributions from WPRBXmas listeners!
+    </p>
+    <p>
+      This part of the site archives as much material from previous WPRBXmas
+      marathons as we can find. There's quite a bit here but we've done our best
+      to try and organize it all so that browsing the archive is easy and fun.
+      Use the link menus below to start exploring the sights & sounds of
+      marathons past.
+    </p>
+    <p class="center">We're always looking to expand the archive!</p>
+    <p>
+      Please
+      <a
+        href="mailto:elves@marathon.christmas?subject:Addition To WPRBXMas 'Ghosts of Marathons Past' Archive"
+        >e-mail us</a
+      >
+      if you have a piece of WPRBXmas history you'd like to share.
+    </p>
+  </div>
+
+  <div class="ghosts_of_marathons_past-dropdowns">
+    <div class="ghosts-wprbxmas_stories">
+      <h3>👻 WPRBXmas Stories</h3>
+      <ul>
+        <li>
+          <span>2015</span>
+        </li>
+        <li>
+          <span>2016</span>
+        </li>
+        <li>
+          <span>2017</span>
+        </li>
+        <li>
+          <span>2018</span>
+        </li>
+        <li>
+          <span>2019</span>
+        </li>
+        <li>
+          <span>2020</span>
+        </li>
+        <li>
+          <span>2021</span>
+        </li>
+      </ul>
+    </div>
+    <div class="ghosts-wprbxmas_songs">
+      <h3>👻 WPRBXmas Songs</h3>
+      <ul>
+        <li>
+          <span>2015</span>
+        </li>
+        <li><span>2016</span></li>
+        <li>
+          <span>2017</span>
+        </li>
+        <li>
+          <span>2018</span>
+        </li>
+        <li>
+          <span>2019</span>
+        </li>
+        <li><span>2020</span></li>
+        <li><span>2021</span></li>
+      </ul>
+    </div>
+    <div class="ghosts-wprbxmas_playlists">
+      <h3>👻 WPRBXmas Playlists</h3>
+      <ul>
+        <li><span>2002</span></li>
+        <li><span>2008</span></li>
+        <li><span>2009</span></li>
+        <li><span>2010</span></li>
+        <li><span>2011</span></li>
+        <li><span>2012</span></li>
+        <li><span>2013</span></li>
+        <li><span>2014</span></li>
+        <li><span>2015</span></li>
+        <li><span>2016</span></li>
+        <li><span>2017</span></li>
+        <li>
+          <span>2018</span>
+        </li>
+        <li>
+          <span>2019</span>
+        </li>
+        <li><span>2020</span></li>
+        <li><span>2021</span></li>
+      </ul>
+    </div>
+  </div>
+</SectionCard>

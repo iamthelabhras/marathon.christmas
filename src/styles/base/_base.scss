@@ -1,0 +1,18 @@
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 210px;
+}
+
+body {
+  background-color: var(--colors__purple);
+  font-family: "Rubik", sans-serif;
+}
+
+main {
+  overflow: hidden;
+}
+
+details summary {
+  cursor: pointer;
+  text-align: center;
+}

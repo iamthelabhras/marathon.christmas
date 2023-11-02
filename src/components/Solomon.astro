@@ -1,0 +1,55 @@
+---
+//    CSS & STYLE IMPORTS
+
+//    ASTRO COMPONENT IMPORTS
+
+//    ASTRO PAGE-SPECIFIC IMPORTS
+
+import SectionCard from "../layouts/SectionCard.astro";
+
+//    FRAMEWORK-SPECIFIC IMPORTS
+
+//    COMPONENT SCRIPTS:
+
+/// You can write any JavaScript/TypeScript that you'd like here.
+/// It will run during the build, but never in the browser.
+/// All variables are available to use in the HTML template below.
+
+//    PAGE-SPECIFIC VARIABLES
+
+/// FULL ASTRO COMPONENT SYNTAX:
+/// https://docs.astro.build/core-concepts/astro-components/
+---
+
+<SectionCard cardID="solomon" cardTitle="Jon Solomon's Tweets" cardSize="half">
+  <img
+    src="/images/jon_solomon_twitter_profile.jpg"
+    class="solotweets__profile_pic"
+    alt="Jon Solomon head & shoulders portrait.  John is wearing a red Santa hat."
+    loading="lazy"
+  />
+  <div class="card_text">
+    <details>
+      <summary>Jon Solomon is the human behind WPRBXmas.</summary>
+      <p>
+        Until November of 2022, he tweeted regularly from @jonsolomon,
+        especially during WPRBXmas.
+      </p>
+      <p>
+        Solobot misses him terribly, and has archived his old tweets here for
+        posterity.
+      </p>
+    </details>
+  </div>
+  <div class="solotweets__solomon_timeline">
+    <a
+      class="twitter-timeline"
+      id="solotweets__solomon_timeline"
+      data-width="450"
+      data-height="450"
+      data-theme="light"
+      href="https://twitter.com/jonsolomon?ref_src=twsrc%5Etfw"
+      >Tweets by jonsolomon</a
+    >
+  </div>
+</SectionCard>

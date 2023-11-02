@@ -1,0 +1,204 @@
+section#now_playing {
+  max-height: 1598px;
+  h3 {
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+  //
+  div.track {
+    max-height: 500px;
+    border-top: 1px solid var(--colors__black);
+    border-bottom: 1px solid var(--colors__black);
+    padding: 20px 20px;
+    overflow: scroll;
+    ///
+    @media screen and (max-width: 535px) {
+      tr {
+        flex-direction: column;
+      }
+      td.spin-time {
+        margin-bottom: 5px;
+      }
+      td.spin-art {
+        display: none !important;
+      }
+      td.spin-text {
+        text-align: center !important;
+        width: 100% !important;
+        max-width: initial !important;
+      }
+      div.info {
+        margin-bottom: 10px;
+      }
+      span.parenthesis {
+        margin: 0;
+        display: block;
+      }
+      .note {
+        display: none !important;
+      }
+    }
+    ///
+    tr {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+    td.spin-time {
+      margin-right: 10px;
+      font-size: 1.15rem;
+    }
+    ///
+    td.spin-art {
+      // Styled by Spinitron's CSS.
+      img {
+        // Hides img alt text for album artwork.
+        // Without this alt text _will_ overflow album artwork playback button and ugly-ify UI.
+        font-size: 0rem;
+      }
+    }
+    ///
+    td.spin-text {
+      text-align: right;
+      width: 65%;
+      max-width: 50ch;
+      span.artist {
+        margin-right: 5px;
+        color: var(--colors__black);
+        font-size: 1.25rem;
+        font-weight: var(--typography__semi_bold);
+      }
+      span.song {
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+        color: var(--colors__red);
+      }
+      span.composer {
+        display: none;
+      }
+      span.release {
+        font-size: 0.85rem;
+        font-style: italic;
+        color: var(--colors__black);
+        &:before {
+          content: "off of: ";
+          color: var(--colors__grey);
+          padding-left: 5px;
+        }
+      }
+      span.parenthesis {
+        font-size: 0.85rem;
+        color: var(--colors__purple);
+      }
+      span.label {
+        font-size: 0.8rem;
+        // color: var(--colors__black);
+      }
+      span.released {
+        font-size: 0.8rem;
+        // color: var(--colors__black);
+      }
+    }
+    ///
+    .note {
+      display: inline-block;
+      text-align: center;
+      margin: 10px 0px;
+      border-radius: 10px;
+      padding: 15px;
+      max-width: 90%;
+      width: 100%;
+      font-size: 0.85em;
+      font-weight: 800;
+      background-color: var(--colors__yellow);
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+    }
+  }
+  //
+  #current_track,
+  #current_playlist {
+    width: 100%;
+    ///
+    table {
+      width: 100%;
+    }
+  }
+  //
+  #current_track {
+    ////
+    @media screen and (max-width: 535px) {
+      div.info {
+        margin-bottom: 0px;
+      }
+    }
+  }
+  #current_playlist {
+    summary {
+      padding: 20px;
+      padding-top: 0;
+    }
+    div.current-playlist h3 {
+      display: none;
+    }
+    h4.playlist-title {
+      font-size: var(--typography__font_size_h2);
+      font-family: var(--typography__whimsey);
+    }
+    div.datetime-block {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 35px;
+      //
+      &:nth-child(3) {
+        font-size: 0;
+        color: var(--colors__white);
+      }
+    }
+    span.show-date,
+    span.show-start,
+    span.show-end {
+      color: var(--colors__black);
+      font-size: 0.95rem;
+    }
+    span.show-start {
+      &:after {
+        content: "to";
+        padding-right: 3px;
+      }
+    }
+    span.show-date {
+      padding-right: 35px;
+    }
+    .playlist-category,
+    .playlist-dj,
+    .playlist-description,
+    .episode-description {
+      display: none;
+    }
+
+    .nonmusic-item {
+      margin: 20px 0;
+      background: var(--colors__yellow_transparent);
+      .non-music-title,
+      img {
+        display: none;
+      }
+    }
+  }
+}
+
+#now_playing__tune_in {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.now_playing__radio {
+  /* Add margin to radio icon to position it slightly away from <p> element. */
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}

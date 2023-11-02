@@ -1,0 +1,70 @@
+---
+//    CSS & STYLE IMPORTS
+
+//    ASTRO COMPONENT IMPORTS
+
+//    ASTRO PAGE-SPECIFIC IMPORTS
+
+//    FRAMEWORK-SPECIFIC IMPORTS
+
+//    COMPONENT SCRIPTS:
+
+/// You can write any JavaScript/TypeScript that you'd like here.
+/// It will run during the build, but never in the browser.
+/// All variables are available to use in the HTML template below.
+
+//    COMPONENT-SPECIFIC VARIABLES
+
+//  Static <head> Variables
+//  NOTE: Changing header variables are stored in /pages/file_name.astro.
+
+let pageICBM = "39.9526, 75.1652";
+let pageGeoPosition = "39.9526;75.1652";
+let pageGeoRegion = "US-PA";
+let pageGeoPlaceName = "Philadelphia";
+let pageImageLink = "https://marathon.christmas/static_ref/snaildartha.png";
+let pageImageAlt = "Jerry the Christmas Snail.";
+let pageSiteName = "MARATHON CHRISTMAS";
+let pageOGLocale = "en_US";
+let pageAuthor = "Labhrás Mac Gabhann";
+
+/// FULL ASTRO COMPONENT SYNTAX:
+/// https://docs.astro.build/core-concepts/astro-components/
+---
+
+<!-- GENERAL META TAGS --><!-- Control the behavior of search engine crawling and indexing -->
+<meta name="robots" content="noindex" />
+<meta name="googlebot" content="noindex" />
+<!-- Tells Google not to show the sitelinks search box -->
+<meta name="google" content="nositelinkssearchbox" />
+<!-- Identify the software used to build the document. -->
+<meta name="generator" content="Astro" />
+<!-- Allows control over how referrer information is passed.  See https://moz.com/blog/meta-referrer-tag for more information on why we opted to use content="origin" here. -->
+<meta name="referrer" content="origin" />
+<!-- Disable automatic detection and formatting of possible phone numbers. -->
+<meta name="format-detection" content="telephone=yes" />
+<!-- Completely opt out of DNS prefetching by setting to "off" -->
+<meta http-equiv="x-dns-prefetch-control" content="off" />
+<!-- Links to information about the author(s) of the document -->
+<link rel="author" href="/humans.txt" />
+<!-- Geo tags -->
+<meta name="ICBM" content={pageICBM} />
+<meta name="geo.position" content={pageGeoPosition} />
+<meta name="geo.region" content={pageGeoRegion} />
+<meta name="geo.placename" content={pageGeoPlaceName} />
+
+<!-- LINKS -->
+
+<!-- Styling & Fonts -->
+
+<!-- Favicon & Icon Settings -->
+<!-- Site's Favicon was downloaded from SVG Repo: https://www.svgrepo.com/svg/206782/santa-claus -->
+<link rel="icon" type="image/svg+xml" href="favicon-mxas.svg" />
+
+<!-- Facebook Open Graph: Static Meta Tags -->
+<meta property="og:type" content="website" />
+<meta property="og:image" content={pageImageLink} />
+<meta property="og:image:alt" content={pageImageAlt} />
+<meta property="og:site_name" content={pageSiteName} />
+<meta property="og:locale" content={pageOGLocale} />
+<meta property="article:author" content={pageAuthor} />

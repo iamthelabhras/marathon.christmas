@@ -1,0 +1,23 @@
+section#solomon,
+section#solobot {
+  align-self: initial;
+  //
+  @media screen and (max-width: 570px) {
+    display: none;
+  }
+  //
+  img.solotweets__profile_pic {
+    align-self: center;
+    width: auto;
+    height: 20vh;
+    margin-bottom: 0 auto;
+    border-radius: 50%;
+    border: 3px solid var(--colors__black);
+  }
+  div.solotweets__solomon_timeline {
+    transform: scaleX(100%);
+  }
+  #twitter-widget-2 {
+    margin-top: 1rem;
+  }
+}

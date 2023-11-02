@@ -1,0 +1,49 @@
+---
+//    CSS & STYLE IMPORTS
+
+//    ASTRO COMPONENT IMPORTS
+import ArchiveTape from "./ArchiveTape.astro";
+
+//    ASTRO PAGE-SPECIFIC IMPORTS
+
+//    FRAMEWORK-SPECIFIC IMPORTS
+
+//    COMPONENT SCRIPTS:
+
+/// You can write any JavaScript/TypeScript that you'd like here.
+/// It will run during the build, but never in the browser.
+/// All variables are available to use in the HTML template below.
+
+//    PAGE-SPECIFIC VARIABLES
+
+const {
+  artist,
+  artistTape = artist,
+  song,
+  songTape = song,
+  length,
+} = Astro.props;
+
+/// FULL ASTRO COMPONENT SYNTAX:
+/// https://docs.astro.build/core-concepts/astro-components/
+---
+
+<section class="archive_entry">
+  <ArchiveTape
+    artistTape={artistTape}
+    songTape={songTape}
+    lengthTape={length}
+  />
+  <div class="bio">
+    <hgroup>
+      <h2>{song}</h2>
+      <p>{artist}</p>
+    </hgroup>
+    <div class="bio">
+      <slot name="bio" />
+    </div>
+  </div>
+  <div class="audio">
+    <slot name="audio" />
+  </div>
+</section>

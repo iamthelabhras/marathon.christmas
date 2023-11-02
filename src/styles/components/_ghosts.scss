@@ -1,0 +1,111 @@
+/* #region Ghosts of Marathons Past Card */
+
+#title_card--ghosts_of_marathons_past {
+}
+
+/* Changed the flex-direction on this div to re-flow the archive dropdowns to column for ALL screen sizes.  Didn't like the way rows were looking on laptop & desktop. */
+.ghosts_of_marathons_past-dropdowns {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex-grow: 2;
+  gap: 0vh;
+  justify-content: space-around;
+  align-content: space-around;
+}
+
+.ghosts-wprbxmas_stories,
+.ghosts-wprbxmas_songs,
+.ghosts-wprbxmas_playlists {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.ghosts-wprbxmas_stories h3,
+.ghosts-wprbxmas_songs h3,
+.ghosts-wprbxmas_playlists h3 {
+  border-bottom: 4px solid var(--colors__black);
+  margin: 0;
+}
+
+.ghosts-wprbxmas_songs h3,
+.ghosts-wprbxmas_playlists h3 {
+  margin-top: 50px;
+}
+
+.ghosts-wprbxmas_stories ul,
+.ghosts-wprbxmas_songs ul,
+.ghosts-wprbxmas_playlists ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  list-style: none;
+  font-family: var(--typography__content);
+  font-weight: 700;
+}
+.ghosts-wprbxmas_stories ul,
+.ghosts-wprbxmas_songs ul {
+  justify-content: space-around;
+}
+
+.ghosts-wprbxmas_playlists ul {
+  justify-content: center;
+}
+
+.ghosts-wprbxmas_stories li,
+.ghosts-wprbxmas_songs li,
+.ghosts-wprbxmas_playlists li {
+  margin-left: 10px;
+}
+
+/* div.ghosts-wprbxmas_stories {
+  display: flex;
+  flex-direction: column;
+  min-width: 12.5vw;
+  border: 1px solid black;
+}
+
+div.ghosts-wprbxmas_songs {
+  display: flex;
+  flex-direction: column;
+  min-width: 12.5vw;
+  border: 1px solid black;
+}
+
+div.ghosts-wprbxmas_playlists {
+  display: flex;
+  flex-direction: column;
+  min-width: 12.5vw;
+  border: 1px solid black;
+} */
+
+/* #endregion */
+
+@media screen and (min-width: 0px) and (max-width: 575px) {
+  /* MEDIA QUERIES -- Mobile */
+  .ghosts_of_marathons_past-container {
+    width: 95vw;
+    margin-top: 5vh;
+    margin-bottom: var(--title_cards--margin---bottom);
+    margin-left: 1vw;
+    margin-right: 2vw;
+  }
+
+  .ghosts_of_marathons_past-container h2 span {
+    white-space: normal;
+  }
+
+  .ghosts_of_marathons_past-dropdowns {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+  /* MEDIA QUERIES - Laptop (13" Screens) */
+  .ghosts_of_marathons_past-dropdowns {
+    flex-direction: column;
+    justify-content: center;
+    column-gap: 100px;
+  }
+}

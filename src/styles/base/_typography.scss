@@ -1,0 +1,133 @@
+:root {
+  // Font-size all rem measurements are based on.
+  font-size: 1em;
+  // Cusom variables
+  // Font families.
+  --typography__site_name: "Candy Canes", sans-serif;
+  --typography__whimsey: "Candy Canes", sans-serif;
+  --typography__content: "Rubik", sans-serif;
+  --typography__header: "Sweater", sans-serif;
+  --typography__tape: "Cassette Tape", sans-serif;
+  // Font sizes.
+  --typography__font_size_h1: 3.5rem;
+  --typography__font_size_h2: 3rem;
+  --typography__font_size_h3: 1.35rem;
+  --typography__font_size_h4: 2.25rem;
+  --typography__font_size_h5: 2rem;
+  --typography__font_size_h6: 1.75rem;
+  --typography__font_size_p: 1.15rem;
+  --typography__font_size_mobile_scale: 0.85;
+  --typography__font_size_site_name: 8.5rem;
+  --typography__font_size_site_name: 10vw;
+  --typography__extra_light: 200;
+  --typography__light: 300;
+  --typography__normal: 500;
+  --typography__semi_bold: 600;
+  --typography__bold: 700;
+  --typography__extra_bold: 800;
+  // Line height.
+  --typography__default_line_height: 1.2;
+  // Box model.
+  --typography__defaults_margin: 0.625rem 0;
+}
+
+html {
+  font-weight: var(--typography__normal);
+  color: var(--colors__black);
+}
+
+body {
+  font-family: var(--typography__content);
+  line-height: var(--typography__default_line_height);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+span,
+ul {
+  color: var(--colors__black);
+  text-shadow: var(--shadows__default_text_shadow);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  text-align: center;
+}
+
+h1,
+h2 {
+  font-family: var(--typography__header);
+  font-weight: var(--typography__bold);
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--typography__content);
+  font-weight: var(--typography__bold);
+}
+
+p,
+span {
+  font-family: var(--typography__content);
+  font-weight: var(--typography__normal);
+  max-width: 45ch;
+}
+
+h1 {
+  margin: var(--typography__defaults_margin);
+  font-size: var(--typography__font_size_h1);
+  &.site_name {
+    font-family: var(--typography__site_name);
+    font-size: var(--typography__font_size_site_name);
+    color: var(--colors__pink);
+  }
+}
+
+main h1:first-of-type {
+  // The <h1> at the top of all site pages.
+  text-align: center;
+  margin-top: var(--boxmodel__h1_page_title_top_margin);
+  margin-bottom: var(--boxmodel__h1_page_title_bottom_margin);
+  padding: var(--boxmodel__default_padding);
+}
+
+h2 {
+  margin: var(--typography__defaults_margin);
+  font-size: var(--typography__font_size_h2);
+}
+
+h3 {
+  margin: var(--typography__defaults_margin);
+  font-size: var(--typography__font_size_h3);
+}
+
+h4 {
+  margin: var(--typography__defaults_margin);
+  font-size: var(--typography__font_size_h4);
+}
+
+h5 {
+  margin: var(--typography__defaults_margin);
+  font-size: var(--typography__font_size_h5);
+}
+
+h6 {
+  margin: var(--typography__defaults_margin);
+  font-size: var(--typography__font_size_h6);
+}
+
+p,
+span,
+li {
+  margin: var(--typography__defaults_margin) 0;
+  font-size: var(--typography__font_size_p);
+}

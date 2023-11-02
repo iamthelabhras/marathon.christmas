@@ -1,0 +1,109 @@
+---
+//    CSS & STYLE IMPORTS
+
+//    ASTRO COMPONENT IMPORTS
+
+//    ASTRO PAGE-SPECIFIC IMPORTS
+
+import SectionCard from "../layouts/SectionCard.astro";
+
+//    FRAMEWORK-SPECIFIC IMPORTS
+
+//    COMPONENT SCRIPTS:
+
+/// You can write any JavaScript/TypeScript that you'd like here.
+/// It will run during the build, but never in the browser.
+/// All variables are available to use in the HTML template below.
+
+//    PAGE-SPECIFIC VARIABLES
+
+/// FULL ASTRO COMPONENT SYNTAX:
+/// https://docs.astro.build/core-concepts/astro-components/
+---
+
+<SectionCard cardID="solobot" cardTitle="Jon Solobot's Tweets" cardSize="half">
+  <img
+    src="./images/jon_solobot_twitter_profile.jpeg"
+    class="solotweets__profile_pic"
+    alt="Jon Solobot's head & shoulder's portrait.  It is identical to Jon Solomon's portrait except Jon Solobot has glowing red laser eyes."
+    loading="lazy"
+  />
+  <div class="card_text">
+    <details>
+      <summary class="center">
+        Jon Solobot is the robot behind MARATHON CHRISTMAS.
+      </summary>
+      <p>
+        He is Jon Solomon's electronic dopplegänger! He is also a Twitter bot we
+        created using
+        <a href="https://www.tensorflow.org/" target="_blank">TensorFlow</a>
+        & the 30,000+ tweets the real (& presumably non-robotic) Jon Solomon's pumped
+        out since June of 2009.
+      </p>
+      <p>
+        He tweets intermittently year-round, except during WPRBXmas, when his
+        #WPRBXmas programming kicks in & he tweets as much as his robot heart
+        desires.
+      </p>
+      <p>
+        When he's not tweeting, Solobot is busy trying to figure out how to (a)
+        survive being immersed in water & (b) pass a Turing test. He also runs
+        MARATHON CHRISTMAS'
+        <a
+          href="https://www.youtube.com/channel/UCZSo5HKps7tHYeUQBKhd10Q"
+          target="_blank">YouTube</a
+        >
+        &
+        <a
+          href="https://open.spotify.com/user/r8czszkjqkyjt215r8efcfixc?si=erA2fX6_T8-5NpC2MBIoCA"
+          target="_blank">Spotify</a
+        >
+        accounts.
+      </p>
+      <p>
+        Jon Solobot is doing his best to live up to the high standards set by
+        trail-blazing c0m3d1ans like
+        <a href="https://twitter.com/dril_gpt2" target="_blank">@dril_pt2</a>,
+        <a href="https://twitter.com/w0a0i0f" target="_blank">@w0a0i0f</a>
+        &
+        <a href="https://twitter.com/SuperBowlBot">@SuperBowlBot</a>.
+      </p>
+      <p>
+        If you're a <em>giant nerd</em> who wants to learn more about the tech keeping
+        Jon Solobot alive, check out
+        <a href="https://pypi.org/project/twint/" target="_blank">this</a>,
+        <a
+          href="https://minimaxir.com/2020/01/twitter-gpt2-bot/"
+          target="_blank">this</a
+        >
+        &
+        <a
+          href="https://helgeklein.com/blog/2020/07/twitter-automation-scheduled-tweets-from-google-sheets/"
+          target="_blank">this</a
+        >.
+      </p>
+    </details>
+  </div>
+
+  <div class="solotweets__solobot_timeline">
+    <a
+      class="twitter-timeline"
+      id="solotweets__solobot_timeline"
+      data-width="450"
+      data-height="450"
+      data-theme="light"
+      href="https://twitter.com/jonsolobot?ref_src=twsrc%5Etfw"
+      >Tweets by jonsolobot</a
+    >
+  </div>
+  <div
+    class="mc_box-change_flex_direction-row mc_box-justify_content-space_around"
+    id="solobot_twitter_card--twitter_widgets--tweet_to_and_follow"
+  >
+    <a
+      href="https://twitter.com/intent/tweet?screen_name=jonsolobot&ref_src=twsrc%5Etfw"
+      class="twitter-mention-button"
+      data-show-count="false">Tweet to @jonsolobot</a
+    >
+  </div>
+</SectionCard>

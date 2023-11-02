@@ -1,0 +1,74 @@
+/*  Note:   CSS custom variables WILL NOT WORK in @font-face {}s.
+            Custom variables for font faces (e.g. "font_family_1") can be found in Typography Sass partial.
+
+    See:   https://stackoverflow.com/questions/58752373/custom-css-properties-in-font-face */
+
+// @font-face Source: https://www.fontsaddict.com/font/candytime.html
+
+@font-face {
+  // Used if no font weight is specified and text is not italicized.
+  font-family: "Candy Canes";
+  src: url("../../../fonts/CandyTime.woff2") format("woff2");
+  src: url("../../../fonts/CandyTime.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  // Used if no font weight is specified and text is italicized.
+  // Included here as a fail-safe; CandyCanes should never be italicized on the site.
+  font-family: "Candy Canes";
+  font-style: italic;
+  src: url("../../../fonts/CandyCanes.woff2") format("woff2");
+  src: url("../../../fonts/CandyCanes.woff") format("woff");
+  font-display: swap;
+}
+
+// @font-face Source:
+
+@font-face {
+  // Used if no font weight is specified and text is not italicized.
+  font-family: "Sweater";
+  src: url("../../../fonts/Sweater.woff2") format("woff2");
+  src: url("../../../fonts/Sweater.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  // Used if no font weight is specified and text is italicized.
+  // Included here as a fail-safe; CandyCanes should never be italicized on the site.
+  font-family: "Sweater";
+  font-style: italic;
+  src: url("../../../fonts/Sweater.woff2") format("woff2");
+  src: url("../../../fonts/Sweater.woff") format("woff");
+  font-display: swap;
+}
+
+// @font-face Source:
+
+@font-face {
+  // Used if no font weight is specified and text is not italicized.
+  font-family: "Rubik";
+  src: url("../../../fonts/Rubik-Light.woff2") format("woff2");
+  src: url("../../../fonts/Rubik-Light.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  // Used if no font weight is specified and text is italicized.
+  // Included here as a fail-safe; CandyCanes should never be italicized on the site.
+  font-family: "Rubik";
+  font-style: italic;
+  src: url("../../../fonts/Rubik-Light.woff2") format("woff2");
+  src: url("../../../fonts/Rubik-Light.woff") format("woff");
+  font-display: swap;
+}
+
+// @font-face Source:
+
+@font-face {
+  // Used if no font weight is specified and text is not italicized.
+  font-family: "Cassette Tape";
+  src: url("../../../fonts/CassetteTape.woff2") format("woff2");
+  src: url("../../../fonts/CassetteTape.woff") format("woff");
+  font-display: swap;
+}

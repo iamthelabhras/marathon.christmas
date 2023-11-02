@@ -1,0 +1,118 @@
+section#countdown {
+  margin: 2rem 0 4rem 0;
+  min-height: initial;
+  max-width: initial;
+  padding: 0;
+  border: initial;
+  background: transparent;
+  //
+  h2 {
+    color: var(--colors__yellow);
+    font-size: calc(var(--typography__font_size_h2) * 0.75);
+  }
+  //
+  #countdown_timer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-self: center;
+    gap: 10px;
+    margin: 0px;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--colors__black);
+    text-align: center;
+    ///
+    div {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      justify-content: space-around;
+      width: 85px;
+      height: 75px;
+      margin: 2rem 0;
+      padding: 5px;
+      border: 0.35rem solid var(--colors__purple_light);
+      border-radius: 0.5rem;
+      background: var(--colors__purple);
+      text-shadow: 0 0 0.1rem var(--colors__black);
+      box-shadow: 2px 2px 1px var(--box_shadow-primary);
+      color: var(--colors__yellow);
+      ////
+      & :before,
+      & :after {
+        content: "";
+        position: absolute;
+        top: -35px;
+        width: 25px;
+        height: 25px;
+        border: 3px solid var(--colors__purple_light);
+      }
+      ////
+      & :before {
+        right: 15px;
+        border-radius: 50px 50px 0 50px;
+        transform: rotate(90deg);
+      }
+      ////
+      & ::after {
+        left: 15px;
+        border-radius: 50px 50px 50px 0;
+        transform: rotate(270deg);
+      }
+      /////
+      span {
+        font-weight: 800;
+        color: var(--colors__yellow);
+        //////
+        &:nth-of-type(2) {
+          font-size: 0.85rem;
+        }
+      }
+    }
+  }
+  //
+  table.marathon_start_and_end_times {
+    width: 75vw;
+    margin: 40px auto 0 auto;
+    border-radius: 15px;
+    padding: 10px 5px;
+    color: var(--colors__purple_light);
+    //
+    th.starts,
+    th.ends {
+      padding-bottom: 15px;
+      font-family: var(--typography__content);
+      font-size: calc(var(--typography__font_size_h6) * 0.75);
+      font-weight: 800;
+    }
+    //
+    td.current_marathon_dates,
+    td.current_marathon_times {
+      text-align: center;
+      font-weight: 800;
+      color: var(--colors__white);
+    }
+    //
+    td.current_marathon_dates {
+      font-size: var(--typography__font_size_p);
+    }
+    //
+    td.current_marathon_times {
+      font-size: calc(var(--typography__font_size_p) * 0.85);
+    }
+  }
+  //
+  #facebook_rsvp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--colors__white);
+    //
+    img {
+      margin-right: 1rem;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+a:link {
+  text-decoration: none;
+  background-image: repeating-linear-gradient(
+    60deg,
+    var(--colors__red),
+    var(--colors__red) 15px,
+    var(--colors__off_white) 0,
+    var(--colors__off_white) 30px
+  );
+  background-size: 0% 3px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  font-weight: 700;
+  color: var(--colors__red);
+  text-shadow: 1px 1px 1px var(--colors__black);
+  transition: background-size 0.5s ease;
+}
+
+a:visited {
+  color: var(--colors__purple);
+}
+
+a:focus,
+a:hover {
+  background-image: repeating-linear-gradient(
+    60deg,
+    var(--colors__red),
+    var(--colors__red) 15px,
+    var(--colors__off_white) 0,
+    var(--colors__off_white) 30px
+  );
+  background-size: 100% 3px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+}
+
+a:active {
+  color: var(--colors__yellow);
+}

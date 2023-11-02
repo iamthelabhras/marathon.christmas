@@ -1,0 +1,69 @@
+---
+//    CSS & STYLE IMPORTS
+
+//    ASTRO COMPONENT IMPORTS
+
+//    ASTRO PAGE-SPECIFIC IMPORTS
+
+//    FRAMEWORK-SPECIFIC IMPORTS
+
+//    COMPONENT SCRIPTS:
+
+/// You can write any JavaScript/TypeScript that you'd like here.
+/// It will run during the build, but never in the browser.
+/// All variables are available to use in the HTML template below.
+
+//    PAGE-SPECIFIC VARIABLES
+
+/// FULL ASTRO COMPONENT SYNTAX:
+/// https://docs.astro.build/core-concepts/astro-components/
+---
+
+<!-- GRMA to Josh Buchea!  We made extensive use of his https://github.com/joshbuchea/HEAD project to create this  sites' <head> elements. --><!-- Set the character encoding for this document, so that all characters within the UTF-8 space (such as emojis) are rendered correctly. -->
+<meta charset="utf-8" />
+
+<!-- Viewport settings related to mobile responsiveness. -->
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<!--  Allows control over where resources are loaded from.  Place as early in the <head> as possible, as the tag only applies to resources that are declared after it!  
+  
+  Currently (12/18/22) this <meta> tag is configured to whitelist resources from:
+  
+  *   Mailgo (https://mailgo.dev/). 
+  *   Spinitron (https://spinitron.com)
+
+  This is a bare bones CSP <meta> tag I can fall back on _in extremis_:
+  
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'"> 
+
+-->
+
+<!-- <meta
+  http-equiv="Content-Security-Policy"
+  content="default-src * data:;img-src * data:;style-src 'self' 'unsafe-inline' 'unsafe-eval';script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net/npm/mailgo@0.9.15/dist/mailgo.min.js https://spinitron.com/static/js/widget.js https://sociablekit.com/app/embed/twitter-hashtag-feed/widget.js https://platform.twitter.com/widgets.js"
+/> -->
+
+<meta
+  http-equiv="Content-Security-Policy"
+  content="
+    default-src * data:;
+    img-src * data:;
+    style-src 'self' 'unsafe-inline' 'unsafe-eval' 
+      https://spinitron.com/static/embed/nowPlaying.min.css?v=1650519636
+      https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css
+      https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js
+      https://fl-1.cdn.flockler.com/assets/embed/grid/assets/stylesheets/application-096098f05e2c22b99bcf2b46c8c6432a5010a418da4ce6dfadd0dc668322f093.css;
+    script-src 'self' 'unsafe-inline' 'unsafe-eval' 
+    https://plugins.flockler.com/embed/18537e0963d03b108ba2f78415d221a6/18537e3c97108353c5ceb8b844712c40
+    https://fl-1.cdn.flockler.com/assets/embed/grid/assets/javascripts/application-bbe4bc59b92264e0bf175915253c7242eca134543b23daefe5ede99a2f533400.js
+    https://fl-1.cdn.flockler.com/embed/embed-v2.js
+      https://cdn.jsdelivr.net 
+      http://js-cdn.music.apple.com 
+      https://platform.twitter.com 
+      https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js
+      https://spinitron.com 
+      http://spinitron.com  
+      http://widgets.spinitron.com 
+      https://unpkg.com/mailgo@0.10.4/;
+  "
+/>

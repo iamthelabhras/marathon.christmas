@@ -1,0 +1,64 @@
+section.card {
+  align-self: start;
+  // Fallback width, just in case cardSize Astro prop is not set.
+  // Identical to section.card.half.
+  width: 45vw;
+  border: 3px solid var(--colors__black);
+  border-radius: 10px;
+  padding: 2rem 1rem;
+  background: var(--colors__white);
+  overflow: hidden;
+  //
+  &.full {
+    width: 95vw;
+    //
+    @media only screen and (max-width: 1230px) {
+      width: 85vw;
+    }
+    @media only screen and (max-width: 650px) {
+      width: 95vw;
+    }
+  }
+  //
+  &.half {
+    width: 45vw;
+    ///
+    @media only screen and (max-width: 1230px) {
+      width: 85vw;
+    }
+    @media only screen and (max-width: 650px) {
+      width: 95vw;
+    }
+  }
+  //
+  summary.section_card__summary {
+    list-style: none;
+    pointer-events: none;
+    ///
+    @media only screen and (max-width: 650px) {
+      pointer-events: initial;
+    }
+  }
+  //
+  h2 {
+    text-align: center;
+  }
+  div.section_card__flexbox {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  div.card_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: clamp(100%, 56ch, 85%);
+    margin: 10px auto 25px auto;
+    border: solid 1px var(--colors__red_transparent_1);
+    border-radius: 0.5rem;
+    padding: 2.15rem;
+    background: var(--colors__red_transparent_2);
+  }
+}

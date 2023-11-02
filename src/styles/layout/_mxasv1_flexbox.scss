@@ -1,0 +1,233 @@
+/* #region Global Containers -- Flex Box */
+
+.flex_container-row {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.flex_container-column {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+/* #region Region-Specific Containers -- Flex Box -- Title Card */
+
+.title_card {
+  justify-content: space-evenly;
+  align-content: center;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  margin-left: 5vh;
+  margin-right: 5vh;
+  border: 3px solid var(--black);
+  border-radius: 10px;
+  box-shadow: 1.75px 1.75px var(--box_shadow-primary);
+  padding: 4vw;
+  background: var(--santa_white);
+}
+
+/* #region Regions (Site Wide) -- Title Card (from WPRBXmas Stories) */
+
+/* CSS "hacks" for audio player courtesy of Spike over at Stack Overflow: 
+  https://stackoverflow.com/questions/3794682/custom-css-for-audio-tag */
+
+.title_card img {
+  width: 25%;
+  height: 25%;
+  align-self: center;
+}
+
+.title_card audio {
+  -webkit-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+  -webkit-border-radius: 7px 7px 7px 7px;
+  border-radius: 7px 7px 7px 7px;
+  width: 75%;
+  align-self: center;
+}
+
+.title_card audio:hover,
+.title_card audio:focus,
+.title_card audio:active {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.25);
+}
+
+.title_card--site_title_and_errata {
+  max-width: 80%;
+  justify-content: space-evenly;
+  align-content: center;
+  margin-left: 5vh;
+  margin-right: 5vh;
+  background: var(--santa_white);
+}
+
+.title_card--subheadings {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* #endregion *
+
+/* #region Title Card Internal Content (Desc, Instructions, Warning) Styling */
+
+.wprbxmas_card--desc {
+  align-self: center;
+  max-width: 60ch;
+  margin: 0px 10px;
+  border-radius: var(--border_radius);
+  padding: 10px 20px;
+  background: var(--santa-red_rgba-1);
+}
+
+.wprbxmas_card--instructions {
+  margin: 10px 0px;
+  border-radius: var(--border_radius);
+  padding: 10px 20px;
+  font-weight: 800;
+  text-align: center;
+  background: var(--santa_green_rgba);
+}
+
+.wprbxmas_card--warning {
+  margin: 0px 10px;
+  border-radius: var(--border_radius);
+  padding: 10px 20px;
+  font-weight: 800;
+  text-align: center;
+  background: var(--santa_yellow);
+}
+
+/* #endregion Title Card Internal Content (Desc, Instructions, Warning) Styling */
+
+/* #region Marathon Christmas Flex Box Title Cards */
+
+.mc_box-flex_containers {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-self: center;
+  justify-content: space-evenly;
+}
+
+.mc_box-flex_container--whole {
+  width: var(--title_cards--whole---width);
+  max-width: 1352px;
+  margin: var(--title_cards--margin---top) auto
+    var(--title_cards--margin---bottom);
+  border: 3px solid var(--black);
+  border-radius: 10px;
+  padding: 4vw;
+  box-shadow: 1.75px 1.75px var(--box_shadow-primary);
+  background: var(--santa_white);
+}
+
+.mc_box-flex_container--halves {
+  width: var(--title_cards--halves---width);
+  margin-top: var(--title_cards--margin---top);
+  margin-bottom: var(--title_cards--margin---bottom);
+  border: 3px solid var(--black);
+  border-radius: 10px;
+  box-shadow: 1.75px 1.75px var(--box_shadow-primary);
+  padding: 4vw;
+  background: var(--santa_white);
+}
+
+.mc_box-flex_container--halves:first-child {
+  margin-left: var(--title_cards--margin---left---far_left);
+  margin-right: var(--title_cards--margin---right---inner_right);
+}
+
+.mc_box-flex_container--halves:last-child {
+  margin-left: var(--title_cards--margin---left---inner_left);
+  margin-right: var(--title_cards--margin---right---far_right);
+}
+
+.mc_box-flex_container--thirds {
+  width: var(--title_cards--thirds---width);
+  margin-top: var(--title_cards--margin---top);
+  margin-bottom: var(--title_cards--margin---bottom);
+  border: 3px solid var(--black);
+  border-radius: 10px;
+  box-shadow: 2.75px 2.75px var(--box_shadow-primary);
+  box-shadow: 1.75px 1.75px var(--box_shadow-primary);
+  padding: 10px;
+  background: var(--santa_white);
+}
+
+.mc_box-flex_container--thirds:first-child {
+  margin-left: var(--title_cards--margin---left---far_left);
+  margin-right: var(--title_cards--margin---right---inner_right);
+}
+
+.mc_box-flex_container--thirds:last-child,
+#title_card--make_a_request {
+  margin-left: var(--title_cards--margin---left---inner_left);
+  margin-right: var(--title_cards--margin---right---far_right);
+}
+
+.mc_box-flex_container--two_thirds {
+  width: var(--title_cards--two_thirds---width);
+  margin-top: var(--title_cards--margin---top);
+  margin-bottom: var(--title_cards--margin---bottom);
+  border: 3px solid var(--black);
+  border-radius: 10px;
+  box-shadow: 2.75px 2.75px var(--box_shadow-primary);
+  box-shadow: 1.75px 1.75px var(--box_shadow-primary);
+  padding: 4vw;
+  background: var(--santa_white);
+}
+
+.mc_box-flex_container--two_thirds:first-child {
+  margin-left: var(--title_cards--margin---left---far_left);
+  margin-right: var(--title_cards--margin---right---inner_right);
+}
+
+.mc_box-flex_container--two_thirds:last-child {
+  margin-left: var(--title_cards--margin---left---inner_left);
+  margin-right: var(--title_cards--margin---right---far_right);
+}
+
+/* #endregion Marathon Christmas Flex Box Title Cards */
+
+@media screen and (min-width: 0px) and (max-width: 575px) {
+  /* Boxify Flexbox layouts for mobile */
+  div.responsive--mobile_flex_direction_column {
+    flex-direction: column;
+  }
+
+  .mc_box-flex_container--halves:first-child,
+  .mc_box-flex_container--thirds:first-child,
+  .mc_box-flex_container--two_thirds:first-child {
+    margin-left: var(--title_cards--margin---left---far_left);
+    margin-right: 0px;
+  }
+
+  .mc_box-flex_container--halves:last-child,
+  .mc_box-flex_container--thirds:last-child,
+  #title_card--make_a_request,
+  .mc_box-flex_container--two_thirds:last-child {
+    margin-left: var(--title_cards--margin---left---far_left);
+    margin-right: 0px;
+  }
+}
+
+@media screen and (min-width: 577px) and (max-width: 1024px) {
+  .mc_box-flex_container--halves:first-child,
+  .mc_box-flex_container--thirds:first-child,
+  .mc_box-flex_container--two_thirds:first-child {
+    margin-left: var(--title_cards--margin---left---far_left);
+    margin-right: 0px;
+  }
+
+  .mc_box-flex_container--halves:last-child,
+  .mc_box-flex_container--thirds:last-child,
+  .mc_box-flex_container--two_thirds:last-child {
+    margin-left: var(--title_cards--margin---left---far_left);
+    margin-right: 0px;
+  }
+}

@@ -1,0 +1,115 @@
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 95%;
+  margin: 3rem auto 2rem auto;
+  border-radius: 25px;
+  padding: 25px;
+  @media screen and (max-width: 650px) {
+    flex-direction: column;
+  }
+  background: var(--colors__purple_light);
+  h3 {
+    font-family: var(--typography__header);
+    color: var(--colors__white);
+  }
+  div {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: start;
+    @media screen and (max-width: 1265px) {
+      &:first-of-type {
+        flex-basis: 100%;
+        margin-bottom: 30px;
+      }
+      &:nth-of-type(2),
+      &:nth-of-type(3),
+      &:nth-of-type(4) {
+        // flex-basis: 33%;
+        flex-basis: 33%;
+        text-align: center;
+        h3 {
+          margin: 30px 0 0 0;
+        }
+      }
+      &:nth-of-type(2) {
+        order: 3;
+        flex-basis: 30%;
+        justify-self: center;
+        // background: blue;
+      }
+      &:nth-of-type(3) {
+        order: 4;
+        align-items: flex-end;
+        flex-basis: 30%;
+        // background: red;
+      }
+      &:nth-of-type(4) {
+        align-items: flex-start;
+        text-align: left;
+        flex-basis: 30%;
+        // background: yellow;
+      }
+    }
+    @media screen and (max-width: 650px) {
+      &:first-of-type {
+        align-self: center;
+      }
+      &:nth-of-type(2) {
+        margin-top: 20px;
+      }
+      &:nth-of-type(3) {
+        align-items: center;
+      }
+    }
+    &:nth-of-type(2),
+    &:nth-of-type(3),
+    &:nth-of-type(4) {
+      align-self: auto;
+    }
+  }
+  img {
+    height: 125px;
+    width: 125px;
+    margin-bottom: 15px;
+    border-radius: 50%;
+  }
+  audio {
+    -webkit-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+    -webkit-border-radius: 7px 7px 7px 7px;
+    border-radius: 7px 7px 7px 7px;
+    width: 175px;
+    height: 25px;
+    &:hover,
+    &:focus,
+    &:active {
+      -moz-box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.4);
+      box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.4);
+      -moz-transform: scale(1.05);
+      transform: scale(1.05);
+    }
+  }
+  span {
+    text-align: center;
+    font-size: 0.75rem;
+    &#peace {
+      font-family: var(--typography__header);
+      font-size: inherit;
+      color: var(--colors__white);
+      margin-top: 10px;
+    }
+  }
+  a {
+    font-size: 0.85rem;
+    &#copyleft {
+      padding-right: 5px;
+    }
+  }
+}

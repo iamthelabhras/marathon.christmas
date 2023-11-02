@@ -1,0 +1,43 @@
+---
+//    CSS & STYLE IMPORTS
+
+//    ASTRO COMPONENT IMPORTS
+
+//    ASTRO PAGE-SPECIFIC IMPORTS
+
+import SectionCard from "../layouts/SectionCard.astro";
+
+//    FRAMEWORK-SPECIFIC IMPORTS
+
+//    COMPONENT SCRIPTS:
+
+/// You can write any JavaScript/TypeScript that you'd like here.
+/// It will run during the build, but never in the browser.
+/// All variables are available to use in the HTML template below.
+
+//    PAGE-SPECIFIC VARIABLES
+
+/// FULL ASTRO COMPONENT SYNTAX:
+/// https://docs.astro.build/core-concepts/astro-components/
+---
+
+<SectionCard cardID="press" cardTitle="Press" cardSize="half">
+  <div class="card_text">
+    <p>
+      Some very nice people have written some very nice things about Jon Solomon
+      & WPRBXmas over the years. We're in the process of archiving those nice
+      things here.
+    </p>
+    <!-- <p>If you'd like to add your name to that list of people, then {DO THIS}.</p> -->
+    <!-- <p>Journalists are encouraged to subscribe to the marathon.christmas mailing list for updates.</p> -->
+    <p>
+      Sometimes links to older articles go dead. If you find a link that no
+      longer works, please
+      <a
+        href="mailto:elves@marathon.christmas?subject=WPRBPressman Dead Link, Ya Dingus!"
+        >click here</a
+      >
+      to let us know.
+    </p>
+  </div>
+</SectionCard>

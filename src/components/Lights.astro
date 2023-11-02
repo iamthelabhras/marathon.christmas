@@ -1,0 +1,71 @@
+---
+/// NOTE: DEFAULT FILE PATHS ARE CONFIGURED FOR .astro PAGES STORED AT /SRC ROOT.  PAGES NESTED WITHIN ROOT WILL NEED THEIR FILE PATHS UPDATED!
+
+//    CSS/STYLE IMPORTS
+import "../styles/all.scss";
+
+//    ASTRO COMPONENT IMPORTS
+import HeadMinimum from "../components/HeadMinimum.astro";
+import HeadStatic from "../components/HeadStatic.astro";
+import Footer from "../components/Footer.astro";
+import Loader from "../components/Loader.astro";
+
+//    ASTRO PAGE-SPECIFIC IMPORTS
+import Chat from "../components/Chat.astro";
+import Countdown from "../components/Countdown.astro";
+import Ghosts from "../components/Ghosts.astro";
+import NowPlaying from "../components/NowPlaying.astro";
+import Press from "../components/Press.astro";
+import Requests from "../components/Requests.astro";
+import Solobot from "../components/Solobot.astro";
+import Solomon from "../components/Solomon.astro";
+import Stream from "../components/Stream.astro";
+import Submissions from "../components/Submissions.astro";
+import WPRBXmas from "../components/WPRBXmas.astro";
+import Welcome from "../components/Welcome.astro";
+import WhatsNew from "../components/WhatsNew.astro";
+
+//    FRAMEWORK-SPECIFIC IMPORTS
+
+//    COMPONENT SCRIPTS:
+
+/// You can write any JavaScript/TypeScript that you'd like here.
+/// It will run during the build, but never in the browser.
+/// All variables are available to use in the HTML template below.
+
+//    PAGE-SPECIFIC VARIABLES
+
+/// Changing <header> Variables
+/// **Note**: Static header variables are stored in HeadStatic.astro.
+
+let pageURL = "https://marathon.christmas";
+let title = "MARATHON CHRISTMAS";
+
+/// **Note**: pageDescription is limited to 150 characters!
+/// Character counter can be found here: https://wordcounter.net/character-count
+
+let pageDescription =
+  "A fansite dedicated to the inimitable Jon Solomon & his annual 25-hour hour #WPRBXmas marathon.";
+let pageKeywords =
+  "Jon Solomon, WPRB, WPRBXmas, #WPRBXmas, Jon Solomon's Annual 25-Hour Holiday Radio Show, Christmas, Christmas music, indie Christmas music, non-mainstream music, non-commerical music, music marathon, college radio, community radio, independent radio, New Jersey, Princeton, New Jersey holiday traditions, Princeton holiday traditions";
+
+/// FULL ASTRO COMPONENT SYNTAX:
+/// https://docs.astro.build/core-concepts/astro-components/
+---
+
+<div id="lights">
+  <ul class="strand move"></ul>
+  <a
+    href="https://www.paypal.com/paypalme/comedyminusone?locale.x=en_US"
+    target="_blank"
+    ><img src="/images/giftbox.png" id="christmas_lights--donate" />
+  </a>
+  <!-- <a
+    href="http://player.streamguys.com/wprb/sgplayer/player.php"
+    target="_blank"
+    ><img src="/images/radio.png" id="marathon_radio"  />
+  </a> -->
+  <a href="https://listen.wprb.com" target="_blank"
+    ><img src="/images/radio.png" id="marathon_radio" />
+  </a>
+</div>

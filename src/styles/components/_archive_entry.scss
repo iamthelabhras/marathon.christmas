@@ -1,0 +1,29 @@
+section.archive_entry {
+  display: flex;
+  flex-direction: column;
+  width: 55ch;
+  margin-bottom: 5vh;
+  border: 1px solid var(--colors__black);
+  border-radius: 10px;
+  padding: 1rem;
+  background: var(--colors__white);
+  //
+  hgroup {
+    margin-bottom: 2rem;
+    p {
+      text-align: center;
+      font-weight: 800;
+      font-size: 1.75rem;
+    }
+  }
+
+  div.bio {
+    flex-grow: 1;
+    margin: 2rem 0;
+  }
+  div.audio {
+    audio {
+      width: 100%;
+    }
+  }
+}

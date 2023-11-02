@@ -1,0 +1,76 @@
+---
+//    CSS & STYLE IMPORTS
+
+//    ASTRO COMPONENT IMPORTS
+
+//    ASTRO PAGE-SPECIFIC IMPORTS
+
+import SectionCard from "../layouts/SectionCard.astro";
+import CurrentPlaylist from "./CurrentPlaylist.astro";
+import CurrentTrack from "./CurrentTrack.astro";
+import CurrentPlaylist from "./CurrentPlaylist.astro";
+
+//    FRAMEWORK-SPECIFIC IMPORTS
+
+//    COMPONENT SCRIPTS:
+
+/// You can write any JavaScript/TypeScript that you'd like here.
+/// It will run during the build, but never in the browser.
+/// All variables are available to use in the HTML template below.
+
+//    PAGE-SPECIFIC VARIABLES
+
+/// FULL ASTRO COMPONENT SYNTAX:
+/// https://docs.astro.build/core-concepts/astro-components/
+---
+
+<SectionCard cardID="now_playing" cardTitle="Now Playing" cardSize="half">
+  <div class="card_text">
+    <p class="center">
+      This card pulls in live playlist data from WPRB's
+      <span class="no_wrap"
+        ><a href="https://spinitron.com/about/">Spinitron</a> feed.</span
+      >
+    </p>
+    <p>Use this to keep up with the WPRXmas playlist.</p>
+    <p>
+      Obviously, if it's not WPRBXmas <i>right now</i> this card will show the current
+      WPRB DJ's playlist. Jon is great, but there are lots of other great DJs on
+      WPRB too! You should definitely consider browsing
+      <a href="https://spinitron.com/WPRB/calendar" target="_blank"
+        >WPRB's current broadcasting schedule</a
+      >
+      and listening to (at least) a few of them.
+    </p>
+    <p>
+      Please keep in mind we don't control Spinitron's API (yet). We've fiddled
+      with the incoming data to make it easier to read, but there may still be
+      the occasional track or two that look a little wacky.
+    </p>
+    <p>
+      If you're having trouble viewing this data in your browser, you can
+      <a href="https://spinitron.com/WPRB/" target="_blank">click here</a>
+      to see the current playlist on Spinitron's website.
+    </p>
+    <div id="now_playing__tune_in">
+      <img
+        src="/images/radio.png"
+        class="now_playing__radio"
+        alt="An icon of an old school portable / handheld radio."
+        loading="lazy"
+      />
+      <!-- <p class="center">
+        <a
+          href="http://player.streamguys.com/wprb/sgplayer/player.php"
+          target="_blank">Click here to tune in to WPRB!</a
+        > -->
+      <p class="center">
+        <a href="https://listen.wprb.com" target="_blank"
+          >Click here to tune in to WPRB!</a
+        >
+      </p>
+    </div>
+  </div>
+  <CurrentTrack />
+  <CurrentPlaylist />
+</SectionCard>

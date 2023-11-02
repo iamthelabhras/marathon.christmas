@@ -1,0 +1,64 @@
+---
+//    CSS & STYLE IMPORTS
+
+//    ASTRO COMPONENT IMPORTS
+
+//    ASTRO PAGE-SPECIFIC IMPORTS
+
+import SectionCard from "../layouts/SectionCard.astro";
+
+//    FRAMEWORK-SPECIFIC IMPORTS
+
+//    COMPONENT SCRIPTS:
+
+/// You can write any JavaScript/TypeScript that you'd like here.
+/// It will run during the build, but never in the browser.
+/// All variables are available to use in the HTML template below.
+
+let currentMarathon = new Date("Dec 24, 2022");
+let WPRBXmasYYYY = currentMarathon.getFullYear();
+let WPRBXmasYY = currentMarathon.getFullYear() % 100;
+
+//    PAGE-SPECIFIC VARIABLES
+
+/// FULL ASTRO COMPONENT SYNTAX:
+/// https://docs.astro.build/core-concepts/astro-components/
+---
+
+<SectionCard cardID="countdown" cardTitle="" cardSize="full">
+  <div id="countdown_timer">
+    <div>
+      <span id="days"></span>
+      <span>days</span>
+    </div>
+    <div>
+      <span id="hours"></span>
+      <span>hours</span>
+    </div>
+    <div>
+      <span id="minutes"></span>
+      <span>minutes</span>
+    </div>
+    <div>
+      <span id="seconds"></span>
+      <span>seconds</span>
+    </div>
+  </div>
+  <h2 id="countdown_message">Countdown to WPRBXmas!</h2>
+  <table class="tg marathon_start_and_end_times">
+    <thead>
+      <tr>
+        <th class="starts">MARATHON STARTS</th>
+        <th class="ends">MARATHON ENDS</th>
+      </tr>
+    </thead>
+    <tr>
+      <td class="current_marathon_dates" id="start_date">12/24/{WPRBXmasYY}</td>
+      <td class="current_marathon_dates" id="end_date">12/25/{WPRBXmasYY}</td>
+    </tr>
+    <tr>
+      <td class="current_marathon_times">5:00pm EST</td>
+      <td class="current_marathon_times">6:00pm EST</td>
+    </tr>
+  </table>
+</SectionCard>

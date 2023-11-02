@@ -1,0 +1,96 @@
+---
+//    CSS & STYLE IMPORTS
+
+//    ASTRO COMPONENT IMPORTS
+
+//    ASTRO PAGE-SPECIFIC IMPORTS
+
+//    FRAMEWORK-SPECIFIC IMPORTS
+
+//    COMPONENT SCRIPTS:
+
+/// You can write any JavaScript/TypeScript that you'd like here.
+/// It will run during the build, but never in the browser.
+/// All variables are available to use in the HTML template below.
+
+let CurrentYear = new Date().getFullYear();
+
+//    PAGE-SPECIFIC VARIABLES
+
+/// FULL ASTRO COMPONENT SYNTAX:
+/// https://docs.astro.build/core-concepts/astro-components/
+---
+
+<footer>
+  <div>
+    <img src="/images/bouncing_santa.gif" />
+    <audio
+      src="/audio/merry_christmas_i_dont_want_to_fight_tonight.mp3"
+      type="audio/mp3"
+      controls></audio>
+    <span id="peace">Peace on Earth, Goodwill to DJs.</span>
+  </div>
+  <div>
+    <span
+      ><a
+        href="https://www.gnu.org/licenses/copyleft.en.html"
+        target='_blank"'
+        id="copyleft"
+      >
+        Copyleft</a
+      >
+      {CurrentYear}</span
+    >
+    <span
+      >Made with
+      <a href="https://www.youtube.com/watch?v=_GallVs75Qw" target="_blank"
+        >Xmas cheer</a
+      >
+      by
+      <a href="http://larrymg.me" target="_blank">Labhrás Mac Gabhann</a> using HTML,
+      CSS / Sass, JavaScript, & {Astro.generator}
+    </span>
+    <span
+      >Third-party tools used to build this site include Google Forms, Google
+      Sheets, Flocker, Spinitron's API, Twitter's API, & YouTube.</span
+    >
+  </div>
+  <div>
+    <h3>MXmas Links!</h3>
+    <ul>
+      <li>
+        <a
+          href="https://www.youtube.com/channel/UCZSo5HKps7tHYeUQBKhd10Q"
+          target="_blank">YouTube</a
+        >
+      </li>
+      <li>
+        <a
+          href="https://pairlist10.pair.net/mailman/listinfo/listeners"
+          target="_blank">Mailing List</a
+        >
+      </li>
+      <li>
+        <a
+          href="https://github.com/iamthelabhras/marathon.christmas"
+          target="_blank">Site GitHub</a
+        >
+      </li>
+    </ul>
+  </div>
+  <div>
+    <h3>WPRBXmas Links!</h3>
+    <ul>
+      <li><a href="https://wprb.com/" target="_blank">WPRB 103.3FM</a></li>
+      <li>
+        <a href="https://keepingscoreathome.com/">Jon Solomon's Homepage</a>
+      </li>
+      <li>
+        <a
+          href="https://www.teepublic.com/stores/jonsolomon/albums/148559-25-hour-holiday-radio-show"
+          target="_blank">WPRBXmas Merch</a
+        >
+      </li>
+    </ul>
+  </div>
+</footer>

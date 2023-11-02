@@ -1,0 +1,13 @@
+main#main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 2rem;
+  width: 100vw;
+  padding: 0 1rem;
+  //
+  h1.site_name {
+    font-family: var(--typography__site_name);
+    font-size: clamp(60px, var(--typography__font_size_site_name), 180px);
+  }
+}

@@ -1,0 +1,33 @@
+---
+//    CSS & STYLE IMPORTS
+
+//    ASTRO COMPONENT IMPORTS
+
+//    ASTRO PAGE-SPECIFIC IMPORTS
+
+//    FRAMEWORK-SPECIFIC IMPORTS
+
+//    COMPONENT SCRIPTS:
+
+/// You can write any JavaScript/TypeScript that you'd like here.
+/// It will run during the build, but never in the browser.
+/// All variables are available to use in the HTML template below.
+
+const { cardID, cardTitle, cardSize } = Astro.props;
+
+//    PAGE-SPECIFIC VARIABLES
+
+/// FULL ASTRO COMPONENT SYNTAX:
+/// https://docs.astro.build/core-concepts/astro-components/
+---
+
+<section class=`card ${cardSize}` id={cardID}>
+  <details open class="section_card__details">
+    <summary class="section_card__summary">
+      <h2>{cardTitle}</h2>
+    </summary>
+    <div class="section_card__flexbox">
+      <slot />
+    </div>
+  </details>
+</section>

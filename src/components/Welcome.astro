@@ -1,0 +1,84 @@
+---
+//    CSS & STYLE IMPORTS
+
+//    ASTRO COMPONENT IMPORTS
+
+//    ASTRO PAGE-SPECIFIC IMPORTS
+
+import SectionCard from "../layouts/SectionCard.astro";
+
+//    FRAMEWORK-SPECIFIC IMPORTS
+
+//    COMPONENT SCRIPTS:
+
+/// You can write any JavaScript/TypeScript that you'd like here.
+/// It will run during the build, but never in the browser.
+/// All variables are available to use in the HTML template below.
+
+//    PAGE-SPECIFIC VARIABLES
+
+/// FULL ASTRO COMPONENT SYNTAX:
+/// https://docs.astro.build/core-concepts/astro-components/
+---
+
+<SectionCard cardID="welcome" cardTitle="Welcome" cardSize="half">
+  <div class="card_text">
+    <p>
+      This site is dedicated to
+
+      <a href="https://spinitron.com/WPRB/dj/148705/Jon-Solomon">Jon Solomon</a
+      >'s
+      <!-- <a href="https://twitter.com/jonsolomon" target="_blank"
+      ><img
+        src="./images/twitter.svg"
+        alt="Twitter icon."
+        class="social_media"
+    /></a>
+    <a href="https://www.instagram.com/jonsolomon/" target="_blank"
+      ><img
+        src="./images/instagram.svg"
+        alt="Instagram icon."
+        loading="lazy"
+        class="social_media"
+    /></a>
+    <a a href="mailto: jon@wprb.com" target="_blank"
+      ><img
+        src="./images/email.svg"
+        alt="E-mail icon"
+        loading="lazy"
+        class="social_media"
+    /></a>
+    <a href="http://keepingscoreathome.com" target="_blank"
+      ><img
+        src="./images/website.svg"
+        alt="Personal website icon."
+        loading="lazy"
+        class="social_media"
+    /></a> -->
+      annual 25-hour holiday marathon on
+      <a href="http://www.wprb.com" target="_blank">103.3FM WPRB</a>
+      and its worldwide community of devoted listeners!
+    </p>
+    <p>
+      You'll find a little bit of everything here, including archives of old
+      marathons, updates about this year's marathon, submissions guidelines, and
+      an assortment of other odds & ends we've created to enhance your listening
+      experience, connect you with other fans, and keep your WPRBXmas spirits
+      riding high all year long.
+    </p>
+
+    <p>
+      Much like WPRBXMas, this site is a perpetual work-in-progress. Please
+      e-mail
+      <a href="mailto:elves@marathon.christmas?subject=Marathon.Chrismtas Bug!"
+        >elves @ marathon dot christmas</a
+      >
+      if you discover any bugs or want to suggest an addition to the site.
+    </p>
+  </div>
+  <!-- <h3>How To Use This Site</h3>
+  <div class="card_text">
+    <p>You are currently viewing the DESKTOP version of this site.</p>
+    <p>Hover over the lights.</p>
+  </div> -->
+</SectionCard>

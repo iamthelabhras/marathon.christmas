@@ -1,0 +1,6 @@
+section#stream {
+  iframe {
+    width: clamp(100%, 56ch, 85%);
+    height: 450px;
+  }
+}

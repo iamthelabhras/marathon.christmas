@@ -1,0 +1,21 @@
+/* Resize WPRBPressmas Card so that its larger "neighbor" doesn't stretch it out too much. */
+#title_card--wprbpressmas {
+  align-self: center;
+}
+
+#title_card--wprbpressmas ul {
+  list-style: none;
+}
+
+#title_card--wprbpressmas li {
+  padding-bottom: 10px;
+}
+
+#title_card--wprbpressmas a.media_outlet {
+  text-decoration: none;
+}
+
+#title_card--wprbpressmas a.media_outlet img {
+  width: 12px;
+  height: 12px;
+}

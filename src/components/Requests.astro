@@ -1,0 +1,63 @@
+---
+//    CSS & STYLE IMPORTS
+
+//    ASTRO COMPONENT IMPORTS
+
+//    ASTRO PAGE-SPECIFIC IMPORTS
+
+import SectionCard from "../layouts/SectionCard.astro";
+
+//    FRAMEWORK-SPECIFIC IMPORTS
+
+//    COMPONENT SCRIPTS:
+
+/// You can write any JavaScript/TypeScript that you'd like here.
+/// It will run during the build, but never in the browser.
+/// All variables are available to use in the HTML template below.
+
+//    PAGE-SPECIFIC VARIABLES
+
+/// FULL ASTRO COMPONENT SYNTAX:
+/// https://docs.astro.build/core-concepts/astro-components/
+---
+
+<SectionCard cardID="requests" cardTitle="Make A Request" cardSize="half">
+  <div class="card_text">
+    <p>
+      If it's WPRBXmas, you can use the form below to send Jon a listener
+      request.
+    </p>
+    <p>
+      Once your request has been submitted, you'll receive a confirmation e-mail
+      and your request will be automatically added to the listener request
+      queue.
+    </p>
+    <p>
+      If you accidentally send Jon incorrect data, please don't submit another
+      request!
+    </p>
+
+    <p>
+      Instead, use the link provided in your confirmation email to edit your
+      request. Your corrections will be automatically merged into the listener
+      request queue.
+    </p>
+    <p>
+      If you have trouble accessing/using the site's request form, you can
+      submit your request directly through Google <a
+        href="https://forms.gle/BZXu559k8u2fjQiL8"
+        target="_blank">here</a
+      >.
+    </p>
+  </div>
+  <details id="requests__details">
+    <summary id="requests__summary"
+      >Click here to open the Listener Request Form!</summary
+    >
+    <iframe
+      id="requests__form"
+      src="https://docs.google.com/forms/d/e/1FAIpQLSfgK_jfRP_N-nXJYicxhuHh5aRtNSvOxOVGC2sGzsV0WQzrcw/viewform?embedded=true"
+      height="1478">Loading…</iframe
+    >
+  </details>
+</SectionCard>

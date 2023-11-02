@@ -1,0 +1,45 @@
+section.archive__intro {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 80%;
+  margin: 10vh auto;
+  border: 3px solid var(--colors__black);
+  border-radius: 10px;
+  padding: 4vw;
+  background: var(--colors__white);
+  //
+  img.santa {
+    width: 300px;
+    height: 300px;
+  }
+  //
+  div {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    ///
+    p {
+      max-width: 55ch;
+    }
+    ///
+    img {
+      display: inline-block;
+      width: 20px;
+      height: 15px;
+    }
+    ///
+    nav {
+      text-align: center;
+      margin-top: 25px;
+      padding: 10px;
+      border: 2px solid var(--colors__black);
+      background: var(--colors__red);
+      font-family: "typography__content", sans-serif;
+      font-size: 2rem;
+      font-style: italic;
+      font-weight: 700;
+    }
+  }
+}

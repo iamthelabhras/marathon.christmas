@@ -1,0 +1,699 @@
+---
+/// NOTE: DEFAULT FILE PATHS ARE CONFIGURED FOR .astro PAGES STORED AT /SRC ROOT.  PAGES NESTED WITHIN ROOT WILL NEED THEIR FILE PATHS UPDATED!
+
+//    CSS/STYLE IMPORTS
+import "../../styles/all.scss";
+
+//    ASTRO COMPONENT IMPORTS
+import HeadMinimum from "../../components/HeadMinimum.astro";
+import HeadStatic from "../../components/HeadStatic.astro";
+import Footer from "../../components/Footer.astro";
+
+//    ASTRO PAGE-SPECIFIC IMPORTS
+
+//    FRAMEWORK-SPECIFIC IMPORTS
+
+//    COMPONENT SCRIPTS:
+
+/// You can write any JavaScript/TypeScript that you'd like here.
+/// It will run during the build, but never in the browser.
+/// All variables are available to use in the HTML template below.
+import ArchiveHeader from "../../components/ArchiveHeader.astro";
+import ArchiveIntro from "../../components/ArchiveIntro.astro";
+import ArchiveCard from "../../layouts/ArchiveCard.astro";
+import ArchiveEntry from "../../components/ArchiveEntry.astro";
+
+//    PAGE-SPECIFIC VARIABLES
+
+/// Changing <header> Variables
+/// **Note**: Static header variables are stored in HeadStatic.astro.
+
+let pageURL = "https://marathon.christmas/archives/2015-songs/";
+let title = "WPRBXmas 2015 Songs";
+
+/// **Note**: pageDescription is limited to 150 characters!
+/// Character counter can be found here: https://wordcounter.net/character-count
+
+let pageDescription = "";
+let pageKeywords = "";
+
+let songTape = "song";
+
+/// FULL ASTRO COMPONENT SYNTAX:
+/// https://docs.astro.build/core-concepts/astro-components/
+---
+
+<html lang="en">
+  <head>
+    <HeadMinimum />
+    <title>{title}</title>
+    <meta name="description" content={pageDescription} />
+    <meta name="keywords" content={pageKeywords} />
+    <!-- Facebook Open Graph: Page-Specific Meta Tags -->
+    <meta property="og:url" content={pageURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={pageDescription} />
+    <HeadStatic />
+    <!-- 2015 WPRBXmas Songs & Stories, Part 1:  https://keepingscoreathome.com/?p=3017 -->
+    <!-- 2015 WPRBXmas Songs & Sotires, Part 2: https://keepingscoreathome.com/?p=3039 -->
+  </head>
+  <body>
+    <main id="2015_songs">
+      <ArchiveHeader media="songs" year="2015" />
+      <ArchiveIntro />
+      <ArchiveCard>
+        <!-- Archival entries begin here. -->
+        <ArchiveEntry
+          artist="The Brixton Riot"
+          song="Holiday in the Sun"
+          length="02:24"
+        >
+          <p slot="bio">
+            Combining American and English influences, New Jersey's
+            <a
+              href="https://www.discogs.com/artist/3426291-The-Brixton-Riot"
+              target="_blank">The Brixton Riot</a
+            >
+            fuses elements of 70's power-pop and punk, 80's jangle-rock and 90's
+            indie rock into a sound that is both familiar and distinct.
+            <a
+              href="https://www.discogs.com/artist/268769-The-Replacements"
+              target="_blank">The Replacements</a
+            >,
+            <a
+              href="https://www.discogs.com/artist/270582-Big-Star"
+              target="_blank">Big Star</a
+            >
+            and
+            <a href="https://www.discogs.com/artist/10384-The-Jam">The Jam</a>
+            represent only a small fraction of their influences.
+          </p>
+          <iframe
+            slot="audio"
+            style="border: 0; width: 100%; height: 42px"
+            src="https://bandcamp.com/EmbeddedPlayer/track=4250156525/size=small/bgcol=333333/linkcol=ffffff/transparent=true/"
+            seamless
+            ><a
+            href="https://thebrixtonriot.bandcamp.com/track/holiday-in-the-sun"
+            >Holiday In The Sun by The Brixton Riot</a></iframe
+          >
+        </ArchiveEntry>
+        <ArchiveEntry
+          artist="B. Musikoff"
+          song="A Can of Simoniz"
+          length="03:25"
+        >
+          <p slot="bio">
+            <a
+              href="https://www.discogs.com/artist/3232651-Brian-Musikoff"
+              target="_blank">Brian Musikoff</a
+            >
+            is a Chooch of Seattle (by way of NJ / NYC) who
+            <a href="http://www.manualcomics.com/" target="_blank"
+              >draws cartoons</a
+            >
+            <a
+              href="https://www.youtube.com/watch?v=5JygVyhKXYo&feature=youtu.be"
+              target="_blank">as needed</a
+            >
+            and plays bass for a rock group named
+            <a
+              href="https://www.discogs.com/artist/3272554-Stuyvesant"
+              target="_blank">Stuyvesant</a
+            >.
+          </p>
+          <iframe
+            slot="audio"
+            style="border: 0; width: 100%; height: 42px"
+            src="https://bandcamp.com/EmbeddedPlayer/track=1563363975/size=small/bgcol=333333/linkcol=ffffff/transparent=true/"
+            seamless
+            ><a href="https://bmusikoff.bandcamp.com/track/a-can-of-simoniz" >A
+            Can of Simoniz by B. Musikoff</a ></iframe
+          >
+        </ArchiveEntry>
+        <ArchiveEntry artist="Modern Hut" song="Silver Bells" length="03:21">
+          <p slot="bio">
+            Playing
+            <a
+              href="http://speakimge.com/album-review-modern-hut-generic-treasure/"
+              target="_blank">“extreme loner folk”</a
+            >
+            with a 2013 album on
+            <a href="https://www.dongiovannirecords.com/" target="_blank"
+              >Don Giovanni Records</a
+            >
+            titled
+            <a
+              href="https://www.discogs.com/Modern-Hut-Generic-Treasure/release/4820345"
+              target="_blank"
+              ><i>Genetic Treasure</i>
+            </a>,
+            <a
+              href="https://www.discogs.com/artist/3418795-Modern-Hut"
+              target="_blank">Modern Hut</a
+            >
+            (for this recording) is Mr.
+            <a href="https://www.discogs.com/artist/2815953-Joe-Steinhardt"
+              >Joe Steinhardt</a
+            >
+            on the acoustic guitar. Enjoy the group's third contribution to the marathon
+            in as many years!
+          </p>
+          <audio
+            slot="audio"
+            src="/audio/songs/wprbxmas_songs-2015-modern_hut-silver_bells.mp3"
+            type="audio/mp3"
+            controls></audio>
+        </ArchiveEntry>
+        <ArchiveEntry
+          artist="King Mistletoe Jr."
+          song="Our Secret Santa"
+          length="02:45"
+        >
+          <p slot="bio">
+            A last minute submission from King Mistletoe (just Steve and Jim),
+            in the style of
+            <a
+              href="https://www.discogs.com/artist/243267-Beat-Happening"
+              target="_blank">Beat Happening</a
+            >'s
+            <a
+              href="https://www.youtube.com/watch?v=khtmNFvSlUM"
+              target="_blank">“Our Secret.”</a
+            >
+          </p>
+          <audio
+            slot="audio"
+            src="/audio/songs/wprbxmas_songs-2015-king_mistletoe_jr-our_secret_santa.mp3"
+            type="audio/mp3"
+            controls></audio>
+        </ArchiveEntry>
+        <ArchiveEntry artist="Amanda X(mas)" song="New Year" length="01:20">
+          <p slot="bio">
+            Hailing from the Kensington area of Philadelphia (home to infamous
+            gangs such as the Yos, Twerks and Fuzzies),
+            <a href="https://www.discogs.com/artist/3338778-Amanda-X"
+              >Amanda X</a
+            >
+            imperviously sallys forth, creating an oasis of bedroom pop and post-punk
+            among a landscape of toxic speed, eroded enamel and chattering human
+            skin suits. Their
+            <a
+              href="https://www.discogs.com/Amanda-X-Amnesia/master/1146768="
+              target="_blank">debut album</a
+            >
+            was released by
+            <a href="https://www.discogs.com/label/24980-Siltbreeze"
+              >Siltbreeze</a
+            >
+            in 2014 and a follow-up is tentatively slated for 2017.
+          </p>
+          <iframe
+            slot="audio"
+            style="border: 0; width: 100%; height: 42px"
+            src="https://bandcamp.com/EmbeddedPlayer/album=3046692590/size=small/bgcol=333333/linkcol=ffffff/transparent=true/"
+            seamless
+            ><a href="https://amandax.bandcamp.com/album/new-year" >New Year by
+            Amanda X</a ></iframe
+          >
+        </ArchiveEntry>
+        <ArchiveEntry
+          artist="Bill & Karle Goffrier"
+          song="South Side of the North Pole"
+          songTape="S.S. of the N.P."
+          length="04:15"
+        >
+          <p slot="bio">
+            <a
+              href="https://www.discogs.com/artist/1051602-Bill-Goffrier"
+              target="_blank">Bill Goffrier</a
+            >
+            was in two of Jon's favorite purveyors of terminal plaid shirt rock,
+            <a
+              href="https://www.discogs.com/artist/109906-The-Embarrassment"
+              target="_blank">The Embarrassment</a
+            >
+            and
+            <a
+              href="https://www.discogs.com/artist/289744-Big-Dipper"
+              target="_blank">Big Dipper</a
+            >. He currently
+            <a href="https://www.goffrier.com/alaska-series/">lives in Alaska</a
+            >
+            with his wife Karlee.
+          </p>
+          <audio
+            slot="audio"
+            src="/audio/songs/wprbxmas_songs-2015-bill_and_karlee_goffrier-south_side_of_the_north_pole.mp3"
+            type="audio/mp3"
+            controls></audio>
+        </ArchiveEntry>
+        <ArchiveEntry
+          artist="Cinchel"
+          song="Evening's Sleigh Ride"
+          length="05:52"
+        >
+          <p slot="bio">
+            <a
+              href="https://www.discogs.com/artist/2390327-Cinchel"
+              target="_blank">Cinchel</a
+            >
+            is a Chicago-based musician working with guitar, effects and laptop to
+            create abstract ambient music that is both minimal and dense.
+          </p>
+          <audio
+            slot="audio"
+            src="/audio/songs/wprbxmas_songs-2015-cinchel-evenings_sleigh_ride.mp3"
+            type="audio/mp3"
+            controls></audio>
+        </ArchiveEntry>
+        <ArchiveEntry
+          artist="The Beach View Family Singers"
+          song="Wenceslas of Sound"
+          length="01:45"
+        >
+          <p slot="bio">
+            Beatrice, Toby and Blaise, with a grand piano and sundry virtual
+            instruments, including a mellotron, give a holiday favorite a
+            somewhat psych deconstruction.
+          </p>
+          <p slot="bio">
+            From the non-existent album <i>Winter Fuel</i>, just over 90 seconds
+            at 110 bpm in the key of A major.
+          </p>
+          <audio
+            slot="audio"
+            src="/audio/songs/wprbxmas_songs-2015-the_beach_view_family_singers-wenceslas_of_sound.mp3"
+            type="audio/mp3"
+            controls></audio>
+        </ArchiveEntry>
+        <ArchiveEntry
+          artist="Aerialist"
+          song="Little Andromedia Boy"
+          length="01:20"
+        >
+          <p slot="bio">
+            <a href="https://www.discogs.com/artist/1348694-Lary-Hoffman"
+              >Lary Hoffman</a
+            >
+            began making music as
+            <a href="https://www.discogs.com/artist/4065528-Aerialist"
+              >Aerialist</a
+            >
+            in 1997. Over the years the project morphed from bedroom electronic pop
+            to synth-rock collaborations with drummers
+            <a
+              href="https://www.discogs.com/artist/1060042-Stevie-Treichel"
+              target="_blank">Stevie Treichel</a
+            >
+            &
+            <a
+              href="https://www.discogs.com/artist/840141-Nikhil-Ranade"
+              target="_blank">Nikhil Ranade</a
+            >, to both analog and computer-based solo instrumental productions.
+          </p>
+
+          <p slot="bio">
+            After a long hiatus, Lary has been steadily digitally self-releasing
+            new Aerialist music since the fall of 2015.
+          </p>
+          <p slot="bio">
+            Based in the DC area, Lary and his wife Erica own Virginia bars
+            <a href="https://galaxyhut.com/" target="_blank">Galaxy Hut</a>
+            and <a href="https://spcbr.com/">Spacebar</a>.
+          </p>
+          <iframe
+            slot="audio"
+            style="border: 0; width: 100%; height: 42px"
+            src="https://bandcamp.com/EmbeddedPlayer/album=3855333411/size=small/bgcol=333333/linkcol=ffffff/track=1255644580/transparent=true/"
+            seamless
+            ><a href="https://aerialist.bandcamp.com/album/nuzak" >nuzak by
+            aerialist</a ></iframe
+          >
+        </ArchiveEntry>
+        <ArchiveEntry
+          artist="Keith Beck's Zigman Bird"
+          artistTape="K.B.'s Zigman Bird"
+          song="Santa Clause Where Are You? (Don't Leave Me Out)"
+          songTape="S.C. Where Are You?"
+          length="03:02"
+        >
+          <p slot="bio">
+            <a
+              href="https://www.discogs.com/artist/7607083-Keith-Beck-4"
+              target="_blank">Keith Beck</a
+            >'s
+            <a
+              href="https://www.discogs.com/artist/5769761-Zigman-Bird"
+              target="_blank">Zigman Bird</a
+            >
+            fearlessly switches between a full-piece rock'n'roll band and an exciting
+            acoustic act, mixing catchy hooks, melodies and lyrics.
+          </p>
+          <audio
+            slot="audio"
+            src="/audio/songs/wprbxmas_songs-2015-zigman_bird-santa_clause_where_are_you_dont_leave_me_out.mp3"
+            type="audio/mp3"
+            controls></audio>
+        </ArchiveEntry>
+        <ArchiveEntry
+          artist="Joshua & Emily Hensley with Michael Harold Doty"
+          artistTape="J&E Hensley w/MH Doty"
+          song="Feliz Navidad"
+          length="02:36"
+        >
+          <p slot="bio">
+            This is indeed
+            <a
+              href="https://www.discogs.com/artist/1762297-Josh-Hensley"
+              target="_blank">Josh</a
+            >
+            and Emily from
+            <a
+              href="https://www.discogs.com/artist/1709658-The-Rutabega"
+              target="_blank">The Rutabega</a
+            >
+            with Michael of Secret Souvenir calling Emily's Mom on the phone to sing
+            her a song.
+          </p>
+          <audio
+            slot="audio"
+            src="/audio/songs/wprbxmas_songs-2015-joshua_and_emily_hensley-feliz_navidad.mp3"
+            type="audio/mp3"
+            controls></audio>
+        </ArchiveEntry>
+        <ArchiveEntry
+          artist="Christopher Williams"
+          song="Where Christmas Dreams Come True"
+          songTape="Xmas Dreams"
+          length="05:04"
+        >
+          <p slot="bio">
+            Christopher Williams is half of
+            <a href="http://glassbees.com/" target="_blank">Glass Bees</a>. The
+            source of the original tape he built this piece around was
+            <a
+              href="https://www.freep.com/story/money/2017/07/14/kmart-audio-tapes/452338001/"
+              >recorded in a Kmart</a
+            >
+            several decades ago.
+          </p>
+          <audio
+            slot="audio"
+            src="/audio/songs/wprbxmas_songs-2015-christopher_williams-where_christmas_dreams_come_true.mp3"
+            type="audio/mp3"
+            controls></audio>
+        </ArchiveEntry>
+        <ArchiveEntry
+          artist="Policymaker"
+          song="Honda's Last Christmas"
+          songTape="Honda's Last Xmas"
+          length="04:32"
+        >
+          <p slot="bio">
+            Michael T. Fournier is Policymaker. Mike is also the
+            drummer/songwriter of
+            <a
+              href="https://www.discogs.com/artist/3219997-Dead-Trend"
+              target="_blank">Dead Trend</a
+            >, and the author of
+            <a
+              href="http://www.michaeltfournier.org/double-nickels"
+              target="_blank"
+              ><i>Double Nickels on the Dime</i>
+            </a>
+            (<a href="https://www.bloomsbury.com/us/series/33-13/">33.3</a>
+            / Bloomsbury) and, most recently,
+            <a
+              href="http://www.michaeltfournier.org/swing-state"
+              target="_blank"
+              ><i>Swing State</i>
+            </a>
+            (<a href="http://threeroomspress.com/">Three Rooms Press</a>). He
+            lives in Western Massachusetts.
+          </p>
+          <audio
+            slot="audio"
+            src="/audio/songs/wprbxmas_songs-2015-policymaker-hondas_last_xmas.mp3"
+            type="audio/mp3"
+            controls></audio>
+        </ArchiveEntry>
+        <ArchiveEntry
+          artist="Bret Saunders' Swingin' Holiday Synths"
+          artistTape="Saunders' S.H. Synths"
+          song="Saunders' Swingin' Yuletide Synths"
+          songTape="Yuletide Synths"
+          length="02:23"
+        >
+          <p slot="bio">
+            Mr. Bret Saunders is from Denver, Colorado where he hosts the
+            <a
+              href="https://kbco.iheart.com/topic/The%20'BCO%20Morning%20Show%20Blog%20(49696)/"
+              target="_blank">KBCO Morning Show</a
+            >. He recorded this short version of a holiday classic using a
+            Microbrute synth and a couple of electronic noise gadgets. The
+            melody hangs in there pretty much to the end.
+          </p>
+          <audio
+            slot="audio"
+            src="/audio/songs/wprbxmas_songs-2015-bret_saunders_swinging_holiday_synths-saunders_swinging_yuletide_synths.mp3"
+            type="audio/mp3"
+            controls></audio>
+        </ArchiveEntry>
+        <ArchiveEntry
+          artist="Neal Markowski"
+          song="Wonderful Chirstmastime"
+          songTape="Wonderful Xmastime"
+          length="22:58"
+        >
+          <p slot="bio">
+            Live. One take. No overdubs or anything else – just
+            composer/musician/noise maker
+            <a
+              href="https://www.discogs.com/artist/3043822-Neal-Markowski"
+              target="_blank">Neal Markowski</a
+            >
+            in a room with the instruments. The ending is actually shorter than it
+            should be, but as Markowski recorded this on his cassette 4-track, the
+            tape kept bunching up for some reason towards the end, hence the “jarring”
+            cuts in the solo drums.
+          </p>
+          <audio
+            slot="audio"
+            src="/audio/songs/wprbxmas_songs-2015-neal_markowski-wonderful_christmastime.mp3"
+            type="audio/mp3"
+            controls></audio>
+        </ArchiveEntry>
+        <ArchiveEntry artist="Prowler" song="Buyers Beware" length="02:01">
+          <p slot="bio">
+            Philadelphia's Prowler are no strangers to the WPRB studios, having
+            visited the station thrice to play live on Jon Solomon's weekly
+            show. There are many different strains of their infectious,
+            head-bobbin' tunes for free download on their
+            <a href="https://prowlerprowler.bandcamp.com/" target="_blank"
+              >Bandcamp page</a
+            >. “Buyers Beware” is also found on their record
+            <a
+              href="https://prowlerprowler.bandcamp.com/album/trash-bag"
+              target="_blank"
+              ><i>Trash Bag</i>
+            </a>.
+          </p>
+          <iframe
+            slot="audio"
+            style="border: 0; width: 100%; height: 42px"
+            src="https://bandcamp.com/EmbeddedPlayer/album=3771610937/size=small/bgcol=333333/linkcol=ffffff/track=21846208/transparent=true/"
+            seamless
+            ><a href="https://prowlerprowler.bandcamp.com/album/trash-bag"
+            >Trash Bag by Prowler</a ></iframe
+          >
+        </ArchiveEntry>
+        <ArchiveEntry
+          artist="Edith Frost"
+          song="Coventry Carol (Arranged by James Dering"
+          songTape="Coventry Carol"
+          length="03:41"
+        >
+          <p slot="bio">
+            <a
+              href="https://www.discogs.com/artist/179554-Edith-Frost"
+              target="_blank">Edith Frost</a
+            >
+            can be found on her
+            <a href="https://edithfrost.com" target="_blank"> website</a>
+            and/or
+            <a href="https://twitter.com/edithfrost" target="_blank">Twitter</a
+            >.
+          </p>
+
+          <p slot="bio">
+            <a href="https://twitter.com/jamesdering" target="_blank"
+              >James Dering</a
+            >
+            hosts the
+            <a
+              href="https://www.podcasts.com/the_better_piano_podcast_learn_how_to_play_piano_improvise_in_jazz_blues_rock_pop_and_classical_styles_play_by_ear_"
+              target="_blank">Better Piano podcast</a
+            >.
+          </p>
+
+          <p slot="bio">
+            This is their third contribution to the marathon in as many years.
+          </p>
+          <audio
+            slot="audio"
+            src="/audio/songs/wprbxmas_songs-2015-edith_frost-coventry_carol.mp3"
+            type="audio/mp3"
+            controls></audio>
+        </ArchiveEntry>
+        <ArchiveEntry
+          artist="These Estates"
+          song="Christmas Creep"
+          length="03:03"
+        >
+          <p slot="bio">
+            Bourbon-driven young Canadian trio
+            <a
+              href="https://www.discogs.com/artist/2472102-These-Estates"
+              target="_blank">These Estates</a
+            >
+            broke from their hiatus to record a holiday song for you. Their two albums
+            <a
+              href="https://theseestates.bandcamp.com/album/triumph-reign"
+              target="_blank"
+              ><i>Triumph, Reign</i>
+            </a>
+            and
+            <a
+              href="https://theseestates.bandcamp.com/album/the-dignity-of-man"
+              target="_blank"
+              ><i>The Dignity of Man</i>
+            </a>
+            are both well worth your time.
+          </p>
+          <iframe
+            slot="audio"
+            style="border: 0; width: 100%; height: 42px"
+            src="https://bandcamp.com/EmbeddedPlayer/track=2548061683/size=small/bgcol=333333/linkcol=ffffff/transparent=true/"
+            seamless
+            ><a href="https://theseestates.bandcamp.com/track/christmas-creep"
+            >Christmas Creep by These Estates</a ></iframe
+          >
+        </ArchiveEntry>
+        <ArchiveEntry
+          artist="The Gotobeds"
+          song="FEEL THE WRATH OF MY XMAS"
+          songTape="XMAS WRATH"
+          length="02:31"
+        >
+          <p slot="bio">
+            Earlier this year Pittsburgh #clowns
+            <a
+              href="https://www.discogs.com/artist/3470468-The-Gotobeds"
+              target="_blank">The Gotobeds</a
+            >
+            released their second album (and first for Sub Pop)
+            <a
+              href="https://www.subpop.com/releases/the_gotobeds/blood_sugar_secs_traffic"
+              target="_blank"><i>Blood // Sugar // Secs // Traffic</i>.</a
+            >
+            Boy is it terrific. If you like
+            <a
+              href="https://shop.comedyminusone.com/products/the-gotobeds-poor-people-are-revolting-lp"
+              target="_blank">“smart-dude avant punk</a
+            >,” has Jon got a band for you!
+          </p>
+          <audio
+            slot="audio"
+            src="/audio/songs/wprbxmas_songs-2015-the_gotobeds-feel_the_wrath_of_my_xmas.mp3"
+            type="audio/mp3"
+            controls></audio>
+        </ArchiveEntry>
+        <ArchiveEntry
+          artist="SAVAK"
+          song="Christmas in Park Slope"
+          songTape="Xmas in Park Slope"
+          length="04:40"
+        >
+          <p slot="bio">
+            <a
+              href="https://www.discogs.com/artist/5081985-SAVAK-2"
+              target="_blank">SAVAK</a
+            >
+            (pronounced "saw-vawk") was formed just last year by members of
+            <a
+              href="https://www.discogs.com/artist/1343189-Obits"
+              target="_blank">The Obits</a
+            >,
+            <a
+              href="https://www.discogs.com/artist/816972-Holy-Fuck"
+              target="_blank">Holy Fuck</a
+            >,
+            <a
+              href="https://www.discogs.com/artist/267485-The-Nation-Of-Ulysses"
+              target="_blank">Nation of Ulysses</a
+            >, and
+            <a
+              href="https://www.discogs.com/artist/3106428-The-Cops-5"
+              target="_blank">The Cops</a
+            >. Their acclaimed debut album
+            <a
+              href="https://savak.bandcamp.com/album/best-of-luck-in-future-endeavors"
+              target="_blank"
+              ><i>Best of Luck in Future Endeavors</i>
+            </a>
+            is available on Bandcamp!
+          </p>
+          <iframe
+            slot="audio"
+            style="border: 0; width: 100%; height: 42px"
+            src="https://bandcamp.com/EmbeddedPlayer/track=2804107284/size=small/bgcol=333333/linkcol=ffffff/transparent=true/"
+            seamless
+            ><a href="https://savak.bandcamp.com/track/christmas-in-park-slope"
+            >Christmas in Park Slope by SAVAK</a ></iframe
+          >
+        </ArchiveEntry>
+        <ArchiveEntry
+          artist="Joel R.L. Phelps"
+          song="Gone Home For Christmas"
+          songTape="Gone Home For Xmas"
+          length="09:20"
+        >
+          <p slot="bio">
+            Vancouver's
+            <a
+              href="https://www.discogs.com/artist/461081-Joel-R-L-Phelps"
+              target="_blank">Joel Phelps</a
+            >
+            is a member of
+            <a
+              href="https://www.discogs.com/artist/5805835-The-Downer-Trio"
+              target="_blank">The Downer Trio</a
+            >
+            and has also recently played with the group
+            <a
+              href="https://www.discogs.com/artist/4352746-DamaLibra"
+              target="_blank">Dama/Libra</a
+            >. Joel is the only artist to record a “Christmas Story” for the
+            show each of the last five years. Many demos and new recordings of
+            his have been posted on
+            <a href="https://soundcloud.com/joel-r-l-phelps" target="_blank"
+              >Soundcloud</a
+            >, with the lion's share of his studio output now available through
+            <a href="https://thedownertrio.bandcamp.com/" target="_blank"
+              >Bandcamp</a
+            >.
+          </p>
+          <audio
+            slot="audio"
+            src="/audio/songs/wprbxmas_songs-2015-joel_rl_phelps-gone_home_for_christmas.mp3"
+            type="audio/mp3"
+            controls></audio>
+        </ArchiveEntry>
+
+        <!-- Archival entries end here. -->
+      </ArchiveCard>
+    </main>
+    <Footer />
+  </body>
+</html>

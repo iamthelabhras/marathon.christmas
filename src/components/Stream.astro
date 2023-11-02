@@ -1,0 +1,59 @@
+---
+//    CSS & STYLE IMPORTS
+
+//    ASTRO COMPONENT IMPORTS
+
+//    ASTRO PAGE-SPECIFIC IMPORTS
+
+import SectionCard from "../layouts/SectionCard.astro";
+
+//    FRAMEWORK-SPECIFIC IMPORTS
+
+//    COMPONENT SCRIPTS:
+
+/// You can write any JavaScript/TypeScript that you'd like here.
+/// It will run during the build, but never in the browser.
+/// All variables are available to use in the HTML template below.
+
+//    PAGE-SPECIFIC VARIABLES
+
+let streamURL = "https://youtu.be/9SKzqGf_UnU";
+let iframeSrc = "https://www.youtube.com/embed/9SKzqGf_UnU";
+
+/// FULL ASTRO COMPONENT SYNTAX:
+/// https://docs.astro.build/core-concepts/astro-components/
+---
+
+<SectionCard cardID="stream" cardTitle="WPRBXMas Stream" cardSize="half">
+  <div class="card_text">
+    <p>Jon live streams the entire WPRBXmas marathon.</p>
+    <p>
+      During WPRBXmas, you can click the embedded video below to tune into Jon's
+      holiday live stream. Alternately, you can <a
+        href=`${streamURL}`
+        target="_blank">click here</a
+      > if you'd like to open the stream in a separate tab or window.
+    </p>
+
+    <!-- <p>
+      It's not WPRBXmas, though, so, in the meantime, here's a 24-hour
+      livestream of a roaring fire to tide you over until next year.
+    </p> -->
+  </div>
+  <!--  CAT TRUMPET 24-HOUR LIVESTREAM OF ROARING FIRE
+    <iframe
+    width="450px"
+    height="450px"
+    src="https://www.youtube.com/embed/kOnIAoqQkd4"
+    title="YouTube video player"
+    allow=""
+    allowfullscreen></iframe> 
+  -->
+  <iframe
+    width="450px"
+    height="450px"
+    src=`${iframeSrc}`
+    title="YouTube video player"
+    allow=""
+    allowfullscreen></iframe>
+</SectionCard>

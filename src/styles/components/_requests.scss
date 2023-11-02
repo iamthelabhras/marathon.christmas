@@ -1,0 +1,19 @@
+section#requests {
+  align-self: center;
+  justify-content: center;
+  align-items: center;
+  //
+  details#requests__details {
+    width: 100%;
+  }
+  //
+  summary#requests__summary {
+    width: 100%;
+    margin: 0 auto;
+  }
+  //
+  iframe#requests__form {
+    display: block;
+    margin: 0 10px auto;
+  }
+}

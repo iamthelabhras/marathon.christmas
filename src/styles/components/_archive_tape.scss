@@ -1,0 +1,376 @@
+// div.wprbxmas_story--cassette_tape {
+//   max-width: var(--wprbxmas_story--max_width);
+// }
+
+div.wprbxmas_story--cassette_tape_mobile {
+  display: none;
+  justify-content: center;
+}
+
+/* #region WPRBXmas Stories & Songs -- Cassette Tape */
+
+.scale_tape {
+  display: flex;
+  flex-direction: row;
+  transform: scale(0.55) rotate(-10deg);
+  margin: 0;
+  padding: 0;
+  max-width: var(--wprbxmas_story--max_width);
+}
+
+.container {
+  margin: 140px auto;
+  margin: 0 auto;
+  width: 430px;
+  width: auto;
+  position: relative;
+}
+.cassette {
+  width: 430px;
+  height: 275px;
+  border-radius: 20px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
+  border: 2px solid rgba(53, 59, 65, 1);
+  overflow: hidden;
+  position: relative;
+}
+.face {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(120, 142, 155, 0.6);
+  background-color: var(--colors__red_transparent_1);
+  background-image: linear-gradient(180deg, #fff 0%, transparent 25%),
+    linear-gradient(90deg, #fff 0%, transparent 25%);
+  background-image: linear-gradient(
+      180deg,
+      rgba(120, 142, 155, 0.8) 0%,
+      transparent 25%
+    ),
+    linear-gradient(90deg, rgba(120, 142, 155, 0.8) 0%, transparent 25%);
+  background-size: 4px 4px, 4px 4px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.screw {
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  border: 2px solid rgba(53, 59, 65, 1);
+  position: absolute;
+  background-image: radial-gradient(rgba(53, 59, 65, 1) 14%, #fff 62%);
+}
+.face .screw:nth-child(1) {
+  left: 4px;
+  top: 4px;
+}
+.face .screw:nth-child(2) {
+  right: 4px;
+  top: 4px;
+}
+.face .screw:nth-child(3) {
+  left: 4px;
+  bottom: 4px;
+}
+.face .screw:nth-child(4) {
+  right: 4px;
+  bottom: 4px;
+}
+.face .screw:nth-child(5) {
+  right: 205px;
+  bottom: 20px;
+  z-index: 50;
+}
+.screw .screw-center {
+  position: absolute;
+  border: 1px solid rgba(53, 59, 65, 1);
+  background-color: rgba(53, 59, 65, 1);
+  height: 8px;
+  top: 1px;
+  left: 5px;
+}
+.screw .screw-center:nth-child(1) {
+  transform: rotate(45deg);
+}
+.screw .screw-center:nth-child(2) {
+  transform: rotate(-45deg);
+}
+.tape {
+  height: 215px;
+  width: 215px;
+  border-radius: 100%;
+  display: inline-block;
+  margin: 35px 4px 50px;
+  position: absolute;
+}
+.tape.beginning {
+  background-color: #211d1d;
+  left: 0;
+}
+.tape.end {
+  right: 0;
+}
+.tape .center {
+  background-color: #fff;
+  width: 32%;
+  height: 32%;
+  border-radius: 100%;
+  position: relative;
+  margin: 0 auto;
+  top: 33%;
+  z-index: 300;
+  box-shadow: inset 0px 0px 12px rgba(120, 142, 155, 1);
+}
+.tape .center .hole {
+  width: 70%;
+  height: 70%;
+  content: "";
+  border-radius: 100%;
+  position: absolute;
+  overflow: hidden;
+  top: 15%;
+  left: 15%;
+  background-color: #f1f1f1;
+  box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.4);
+}
+.tape .center .hole span {
+  width: 10%;
+  height: 20%;
+  background-color: #fff;
+  display: inline-block;
+  position: absolute;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4), 0px 0px 1px rgba(0, 0, 0, 0.4);
+}
+.tape .center .hole span:nth-child(1) {
+  top: 0;
+  left: 46%;
+}
+.tape .center .hole span:nth-child(2) {
+  top: 17%;
+  right: 12%;
+  -moz-transform: rotate(60deg);
+  -webkit-transform: rotate(60deg);
+  -o-transform: rotate(60deg);
+  -ms-transform: rotate(60deg);
+  transform: rotate(60deg);
+}
+.tape .center .hole span:nth-child(3) {
+  bottom: 17%;
+  right: 12%;
+  -moz-transform: rotate(120deg);
+  -webkit-transform: rotate(120deg);
+  -o-transform: rotate(120deg);
+  -ms-transform: rotate(120deg);
+  transform: rotate(120deg);
+}
+.tape .center .hole span:nth-child(4) {
+  top: 17%;
+  left: 12%;
+  -moz-transform: rotate(-60deg);
+  -webkit-transform: rotate(-60deg);
+  -o-transform: rotate(-60deg);
+  -ms-transform: rotate(-60deg);
+  transform: rotate(-60deg);
+}
+.tape .center .hole span:nth-child(5) {
+  bottom: 17%;
+  left: 12%;
+  -moz-transform: rotate(-120deg);
+  -webkit-transform: rotate(-120deg);
+  -o-transform: rotate(-120deg);
+  -ms-transform: rotate(-120deg);
+  transform: rotate(-120deg);
+}
+.tape .center .hole span:nth-child(6) {
+  bottom: 0;
+  left: 46%;
+}
+.sticker {
+  border: 3px solid rgba(120, 142, 155, 1);
+  box-shadow: inset 0px 0px 15px rgba(120, 142, 155, 1);
+  background-color: #e1e1e1;
+  width: 380px;
+  height: 195px;
+  border-radius: 15px;
+  margin: 22px auto;
+  position: relative;
+  overflow: hidden;
+}
+.sticker .title-label {
+  width: 94%;
+  height: 18px;
+  background-color: white;
+  margin: 1px auto;
+}
+.sticker .title-label:nth-child(1) {
+  margin-top: 10px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.sticker .title-label:nth-child(3) {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.sticker .bottom-label {
+  width: 100%;
+  height: 30px;
+  box-shadow: inset 0px -4px 5px rgba(120, 142, 155, 1);
+  background-color: #3c97c6;
+  background-color: var(--colors__black);
+  position: absolute;
+  bottom: 0;
+}
+.sticker .window {
+  background-color: #f1f1f1;
+  width: 80%;
+  height: 78px;
+  position: absolute;
+  bottom: 40px;
+  left: 10%;
+  border-radius: 4px;
+  overflow: hidden;
+  filter: blur(1px);
+  -o-filter: blur(1px);
+  -ms-filter: blur(1px);
+  -moz-filter: blur(1px);
+  -webkit-filter: blur(1px);
+  box-shadow: 0px 0px 20px rgba(120, 142, 155, 1);
+}
+.sticker .window .tape {
+  top: -103px;
+  left: -63px;
+}
+.text {
+  color: #211d1d;
+  font-weight: bold;
+  font-family: Times New Roman, serif;
+  position: absolute;
+}
+
+#text1.text {
+  font-size: 38px;
+  top: 90px;
+  left: 5px;
+}
+#text2 {
+  font-family: var(--typography__tape), sans-serif;
+  position: absolute;
+  top: 12px;
+  left: 45px;
+  font-size: 28px;
+  color: #03082b;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#text3,
+#text4,
+#text5 {
+  font-family: Arial, sans-serif;
+  color: #fff;
+}
+#text3 {
+  font-size: 25px;
+  font-weight: bold;
+  margin-left: 35px;
+}
+#text4 {
+  font-size: 14px;
+  line-height: 28px;
+  text-align: right;
+  position: absolute;
+  right: 10px;
+}
+#text5 {
+  font-size: 12px;
+}
+.side {
+  width: 4px;
+  height: 65px;
+  background-color: rgba(120, 142, 155, 1);
+  position: absolute;
+  bottom: 30px;
+}
+.side.left {
+  left: -4px;
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px;
+  box-shadow: -3px 3px 7px rgba(0, 0, 0, 0.2), 0px 0px 2px rgba(53, 59, 65, 1);
+}
+.side.right {
+  left: 434px;
+  border-bottom-right-radius: 3px;
+  border-top-right-radius: 3px;
+  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.2), 0px 0px 2px rgba(53, 59, 65, 1);
+}
+.socket {
+  /* border: 6px solid rgba(120, 142, 155, 1); */
+  border: 1px solid black;
+  background-color: rgba(120, 142, 155, 0.4);
+  width: 292px;
+  height: 50px;
+  border-radius: 35px 35px 0px 0px;
+  position: absolute;
+  bottom: -18px;
+  left: 63px;
+}
+.socket .hole {
+  border: 2px solid rgba(53, 59, 65, 1);
+  position: absolute;
+  background-color: #f1f1f1;
+}
+.socket .hole:nth-child(1) {
+  border-radius: 100%;
+  width: 12px;
+  height: 12px;
+  bottom: 15px;
+  left: 30px;
+}
+.socket .hole:nth-child(2) {
+  border-radius: 100%;
+  width: 12px;
+  height: 12px;
+  bottom: 15px;
+  right: 30px;
+}
+.socket .hole:nth-child(3) {
+  border-radius: 6px;
+  width: 14px;
+  height: 14px;
+  bottom: 23px;
+  left: 85px;
+}
+.socket .hole:nth-child(4) {
+  border-radius: 6px;
+  width: 14px;
+  height: 14px;
+  bottom: 23px;
+  right: 85px;
+}
+
+#signature {
+  font-family: monospace;
+  font-size: 18px;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  color: #000;
+  font-weight: normal;
+}
+#signature a {
+  text-decoration: none;
+  color: rgb(37, 33, 142);
+  font-weight: bold;
+}
+#signature a:hover {
+  text-decoration: underline;
+}
+
+/* #endregion WPRBXmas Stories & Songs -- Cassette Tape */
+
+/* #region WPRBXmas Stories -- Cassette Tape (Mobile Only) */
+
+img.cassette_tape_mobile {
+  transform: rotate(-10deg) scale(50%);
+}
+
+/* #endregion */

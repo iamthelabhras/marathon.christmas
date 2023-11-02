@@ -1,0 +1,135 @@
+/*  GRMA to Joe Harry for providing much of the "inspiration" that made this site loader possible:  https://codepen.io/woodwoerk/pen/XXJoMa */
+
+/* Attention!  #loader__loader & .loader__hidden are referenced in loader.js.  Changes made to either value should be reflected in loader.js or the site loader _will_ break! */
+
+div#loader__loader {
+  z-index: 99;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: var(--colors__purple);
+  /* Component-scoped CSS custom variables. */
+  --loader__anim_time: 8.5s;
+  --loader__candy_height: 300px;
+  --loader__candy_width: 100px;
+  --loader__fade_out_time: 2s;
+  //
+  &.loader__hide {
+    animation: loader__keyframes_hiding_loader var(--loader__fade_out_time);
+    animation-fill-mode: forwards;
+  }
+  //
+  div.loader__container {
+    overflow: hidden;
+    display: flex;
+    opacity: 0;
+    margin: calc(50vh - 150px) auto 0 auto;
+    width: var(--loader__candy_width);
+    height: var(--loader__candy_height);
+    border-radius: var(--loader__candy_width);
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    background-color: var(--santa_red_rgba);
+    box-shadow: 40px 20px 15px -30px var(--colors__red_loader_box_shadow_container);
+    transform: rotate(90deg);
+    animation: loader__keyframes_loading_candy var(--loader__anim_time)
+      cubic-bezier(0.87, -0.41, 0.19, 1.44) infinite;
+    animation-fill-mode: forwards;
+  }
+  //
+  div.loader__candy_cane {
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    align-self: flex-end;
+    box-shadow: 0px 0px 10px var(--colors__red_loader_box_shadow_candy_cane)
+      inset;
+    background-image: repeating-linear-gradient(
+      -45deg,
+      var(--colors__white_loader) 0 20px,
+      var(--colors__red_loader) 20px 40px
+    );
+    animation: loader__keyframes_loading_loader var(--loader__anim_time) ease-in
+      infinite;
+    animation-fill-mode: forwards;
+    ///
+    &:before {
+      content: "";
+      background-color: var(--colors__purple);
+      width: calc(var(--loader__candy_width) / 4);
+      height: calc(var(--loader__candy_height) * 0.7);
+      display: flex;
+      align-self: flex-end;
+    }
+    ///
+    &:after {
+      content: "";
+      background-color: var(--colors__purple);
+      width: calc(var(--loader__candy_width) / 2);
+      height: calc(
+        var(--loader__candy_height) - (var(--loader__candy_height) / 10)
+      );
+      border-radius: 50px;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+      display: flex;
+      align-self: flex-end;
+    }
+  }
+}
+
+@keyframes loader__keyframes_loading_loader {
+  //
+  0% {
+    height: 0%;
+  }
+  //
+  50% {
+    height: 100%;
+  }
+}
+
+@keyframes loader__keyframes_loading_candy {
+  //
+  5% {
+    opacity: 1;
+  }
+  //
+  50% {
+    transform: rotate(90deg) scale(1);
+  }
+  //
+  60% {
+    transform: rotate(-10deg) scale(1);
+  }
+  //
+  70% {
+    transform: rotate(20deg) scale(1);
+  }
+  //
+  80% {
+    transform: rotate(-10deg) scale(1);
+  }
+  //
+  90% {
+    transform: rotate(30deg) scale(1);
+    opacity: 1;
+  }
+  //
+  100% {
+    transform: rotate(-180deg) scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes loader__keyframes_hiding_loader {
+  //
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
