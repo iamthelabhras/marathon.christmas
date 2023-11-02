@@ -2,15 +2,15 @@
 
 // Configures countdown timer using machine's local time (e.g. EST).
 // I use this to double-check that dates configured using local time & UTC return identical results.
-// let marathonStart = new Date("Dec 24, 2022 17:00:00");
-// let marathonEnd = new Date("Dec 25, 2022 18:00:00");
-// let marathonRefresh = new Date("Dec 25 2022 18:15:00");
+// let marathonStart = new Date("Dec 24, 2023 17:00:00");
+// let marathonEnd = new Date("Dec 25, 2023 18:00:00");
+// let marathonRefresh = new Date("Dec 25 2023 18:15:00");
 
 // Configures countdown timer using UTC.  
 // This ensures that countdown is the same for _all_ site visitors, regardless of where they are in the world.
-let marathonStart = new Date(Date.UTC(2022,11,24,22));
-let marathonEnd = new Date(Date.UTC(2022,11,25,23));
-let marathonRefresh = new Date(Date.UTC(2022,11,25,23,15));
+let marathonStart = new Date(Date.UTC(2023,11,24,22));
+let marathonEnd = new Date(Date.UTC(2023,11,25,23));
+let marathonRefresh = new Date(Date.UTC(2023,11,25,23,15));
 
 let tableStart = document.getElementById("start_date");
 let tableEnd = document.getElementById("end_date");
@@ -18,9 +18,9 @@ let tableEnd = document.getElementById("end_date");
 // Define functions.
 
 function addOneYear(date) {
-  date.setFullYear(date.getFullYear() + 1);
-  return date;
-}
+   date.setFullYear(date.getFullYear() + 1);
+   return date;
+ }
 
 // Configure WPRBXmas countdown timer to update every 1 seconds. 
 let countdownTimer = setInterval(function () {
@@ -79,8 +79,8 @@ let countdownTimer = setInterval(function () {
     marathonStart = addOneYear(marathonStart);
     marathonEnd = addOneYear(marathonEnd);
     marathonRefresh = addOneYear(marathonRefresh);
-    tableStart.innerHTML = "12/24/23";
-    tableEnd.innerHTML = "12/25/23"
+    tableStart.innerHTML = "12/24/24";
+    tableEnd.innerHTML = "12/25/24"
     console.log(marathonStart);
     console.log(marathonEnd);
     console.log(marathonRefresh);
