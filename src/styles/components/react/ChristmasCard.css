@@ -1,0 +1,66 @@
+/* Christmas Card Container */
+.christmas-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  width: 200px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  margin: 10px; /* Add margin for spacing between cards */
+}
+
+/* Christmas Tree */
+.christmas-tree {
+  position: absolute;
+  top: 10px;
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 30px solid #228B22; /* Dark green color for the tree */
+}
+
+/* Tree Trunk */
+.tree-trunk {
+  position: absolute;
+  top: 40px;
+  width: 10px;
+  height: 20px;
+  background-color: #8B4513; /* Saddle Brown color for the trunk */
+}
+
+/* Snowflakes */
+.snowflake {
+  position: absolute;
+  color: #ffffff;
+  font-size: 24px;
+}
+
+/* Christmas Greeting */
+.greeting {
+  margin-top: 20px;
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  color: #ff0000; /* Red color for the greeting */
+}
+
+/* Add animation for snowflakes falling */
+@keyframes snowfall {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(300px);
+  }
+}
+
+/* Apply animation to snowflakes */
+.snowflake {
+  animation: snowfall linear infinite;
+  animation-duration: 5s; /* Adjust the duration of the animation */
+}
+
