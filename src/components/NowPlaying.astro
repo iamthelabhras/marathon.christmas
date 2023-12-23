@@ -7,10 +7,9 @@
 
 import SectionCard from "../layouts/SectionCard.astro";
 import CurrentPlaylist from "./CurrentPlaylist.astro";
-import CurrentTrack from "./CurrentTrack.astro";
-import CurrentPlaylist from "./CurrentPlaylist.astro";
 
 //    FRAMEWORK-SPECIFIC IMPORTS
+import CurrentTrack from "./react/CurrentTrack.jsx";
 
 //    COMPONENT SCRIPTS:
 
@@ -71,6 +70,6 @@ import CurrentPlaylist from "./CurrentPlaylist.astro";
       </p>
     </div>
   </div>
-  <CurrentTrack />
+  <CurrentTrack client:idle />
   <CurrentPlaylist />
 </SectionCard>
