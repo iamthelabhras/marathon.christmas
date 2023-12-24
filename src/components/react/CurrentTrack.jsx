@@ -20,9 +20,9 @@ const CurrentTrack = () => {
   };
 
   const compareCurrentTracks = () => {
-    const currentTrackElement = document.getElementById('current_track');
-    const diffTrackElement = document.getElementById('diff_track');
-    // Get the <tr> elements from current_track and diff_track divs
+    const currentTrackElement = document.getElementById('current_spinitron_track');
+    const diffTrackElement = document.getElementById('diff_spinitron_track');
+    // Get the <tr> elements from current_spinitron_track and diff_spinitron_track divs
     const currentTrackRow = currentTrackElement?.querySelector('.spin-item');
     const diffTrackRow = diffTrackElement?.querySelector('.spin-item');
     // Check if IDs are different
@@ -31,8 +31,8 @@ const CurrentTrack = () => {
   };
 
   const removeAndReaddComponent = () => {
-    const currentTrackElement = document.getElementById('current_track');
-    const diffTrackElement = document.getElementById('diff_track');
+    const currentTrackElement = document.getElementById('current_spinitron_track');
+    const diffTrackElement = document.getElementById('diff_spinitron_track');
     const isNewSong = compareCurrentTracks();
     if (!isNewSong) {
       console.log('Current track is still playing. Updating diff track ...');
@@ -41,7 +41,7 @@ const CurrentTrack = () => {
       parentElement?.removeChild(diffTrackElement);
 
       // Create a new diff track element
-      const newDiffTrackElement = createTrackElement('diff_track', 'none');
+      const newDiffTrackElement = createTrackElement('diff_spinitron_track', 'none');
       // Append the new diff track element to the parent
       parentElement?.appendChild(newDiffTrackElement);
     }
@@ -52,8 +52,8 @@ const CurrentTrack = () => {
       parentElement?.removeChild(currentTrackElement);
 
       // Create new diff & current track elements
-      const newDiffTrackElement = createTrackElement('diff_track', 'none');
-      const newCurrentTrackElement = createTrackElement('current_track', 'block');
+      const newDiffTrackElement = createTrackElement('diff_spinitron_track', 'none');
+      const newCurrentTrackElement = createTrackElement('current_spinitron_track', '');
 
       // Append the new diff & current track elements to the parent
       parentElement?.appendChild(newDiffTrackElement);
@@ -92,33 +92,35 @@ const CurrentTrack = () => {
   }, []); // Empty dependency array ensures the effect runs only once on mount
 
   return (
-    <div>
+  <>
       <h3 className="center">Current Track</h3>
-      <div
-        id="current_track"
-        className="spinitron-js-widget track"
-        data-action="now-playing-v2"
-        data-station="wprb"
-        data-num="0"
-        data-sharing="0"
-        data-cover="1"
-        data-player="1"
-        data-merch="0"
-        data-refresh-count={refreshCount}
-      ></div>
-      <div
-        id="diff_track"
-        className="spinitron-js-widget track"
-        data-action="now-playing-v2"
-        data-station="wprb"
-        data-num="0"
-        data-sharing="0"
-        data-cover="1"
-        data-player="1"
-        data-merch="0"
-        data-refresh-count={refreshCount}
-      ></div>
-    </div>
+      <div id="current_track">
+        <div
+            id="current_spinitron_track"
+            className="spinitron-js-widget track"
+            data-action="now-playing-v2"
+            data-station="wprb"
+            data-num="0"
+            data-sharing="0"
+            data-cover="1"
+            data-player="1"
+            data-merch="0"
+            data-refresh-count={refreshCount}
+          ></div>
+         <div
+            id="diff_spinitron_track"
+            className="spinitron-js-widget track"
+            data-action="now-playing-v2"
+            data-station="wprb"
+            data-num="0"
+            data-sharing="0"
+            data-cover="1"
+            data-player="1"
+            data-merch="0"
+            data-refresh-count={refreshCount}
+          ></div>
+      </div>
+  </>
   );
 };
 
